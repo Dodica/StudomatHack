@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://www.isvu.hr/studomat/hr/index -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 		
+ 		<title>Studomat - Početna</title>
+		
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#0066CC">
+	<meta name="description" content="Studomat je modul Informacijskog sustava visokih učilišta (ISVU) namijenjen studentima. Pomoću Studomata: prijavljuju/odjavljuju ispite, pregledavaju raspored za pismeni ispit, rezultate pismenih ispita, nalaze raspored za usmeni ispit, upisuju godinu, biraju izborne predmete, upisuju predmeta na vlastiti zahtjev, zahtijevaju ispis raznih potvrda, imaju uvid u financijske obveze.">
+	<meta name="author" content="Sveučilište u Zagrebu Sveučilišni računski centar Srce ">
+	<link rel="stylesheet" href="./Studomat - Početna_files/material-design-iconic-font.min-e9365fe85b7e4db79a87015e52c3db6c.css">
+	<link rel="stylesheet" href="./Studomat - Početna_files/app.min-0b71340737a719277313aa273822ffb5.css">
+	<link rel="stylesheet" href="./Studomat - Početna_files/studomat-6df04272e7230142e82bec409a35911d.css">
+	<link rel="stylesheet" href="./Studomat - Početna_files/animate.min-178b651958ceff556cbc5f355e08bbf1.css">
+	<link rel="stylesheet" href="./Studomat - Početna_files/jquery.scrollbar-e98a484d945fac2621fdc1a7e9b01667.css">
+	<link rel="stylesheet" href="./Studomat - Početna_files/sweetalert2.min-dc807f10cd754074e826fd108d9161fc.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="https://www.isvu.hr/studomat/img/icons/ios/57-ec52de669e4767db81eeec557a96a6e3.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://www.isvu.hr/studomat/img/icons/ios/60-486131fc3be908f473bb030fcbc5fc6b.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://www.isvu.hr/studomat/img/icons/ios/72-b0426744672475fb3a9c1a2b1a279dee.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.isvu.hr/studomat/img/icons/ios/76-24ba17a0d009eaf99f3f2e32a4e6a4e7.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://www.isvu.hr/studomat/img/icons/ios/114-c5374ef08201970bd53e96c9484011c9.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.isvu.hr/studomat/img/icons/ios/120-681e0ba4c3f7d84b9b93ba35b92eef9e.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://www.isvu.hr/studomat/img/icons/ios/144-57193c7f64182bfddd51aa49455025b7.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.isvu.hr/studomat/img/icons/ios/152-c28c0dd91b5bf94615d49cbdf9e9c6ac.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.isvu.hr/studomat/img/icons/ios/180-9f88e568966924c32a2a91cae0f43f7f.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="https://www.isvu.hr/studomat/img/android-icon-192x192-01db03b08b543f0203378556410ba5aa.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.isvu.hr/studomat/img/favicon-32x32-04f51568784f4ee50400de592744fb1c.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://www.isvu.hr/studomat/img/favicon-96x96-9538865498aff870a6ec0ba25a241c0f.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.isvu.hr/studomat/img/favicon-16x16-de7d25dedbaa96575625b530deeb59b3.png">
+	<meta name="theme-color" content="#ffffff">
+	
+
+
+		
+	<!-- Vendors -->
+	<script src="./Studomat - Početna_files/jquery.min-c9f5aeeca3ad37bf2aa006139b935f0a.js.download"></script>
+	<!-- Javascript -->
+	
+		<script src="./Studomat - Početna_files/boomerang-ace8e070b26970b96a1901857a3d22ca.js.download"></script>
+		<script src="./Studomat - Početna_files/rt-d02715f0c8e7d3cb42110b19012c72fc.js.download"></script>
+		<script src="./Studomat - Početna_files/bw-4c040ebbe21377616d94682bb1cfe420.js.download"></script>
+		<script src="./Studomat - Početna_files/navtiming-063311043df397e0631baec780c2f078.js.download"></script>
+
+		<style type="text/css">.apexcharts-canvas {
+  position: relative;
+  user-select: none;
+  /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart are */
+  /* overflow: hidden; */
+}
+
+.apexcharts-inner {
+  position: relative;
+}
+
+.apexcharts-legend-series {
+  cursor: pointer;
+}
+
+.apexcharts-legend-series.no-click {
+  cursor: auto;
+}
+
+.inactive-legend {
+  opacity: 0.45;
+}
+
+.legend-mouseover-inactive {
+  transition: 0.15s ease all;
+  opacity: 0.20;
+}
+
+.apexcharts-series-collapsed {
+  opacity: 0;
+}
+
+.apexcharts-gridline, .apexcharts-text {
+  pointer-events: none;
+}
+
+.apexcharts-tooltip {
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px -4px #999;
+  cursor: default;
+  font-size: 14px;
+  left: 62px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 12;
+  transition: 0.15s ease all;
+}
+.apexcharts-tooltip.light {
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, 0.96);
+}
+.apexcharts-tooltip.dark {
+  color: #fff;
+  background: rgba(30,30,30, 0.8);
+}
+
+.apexcharts-tooltip .apexcharts-marker,
+.apexcharts-area-series .apexcharts-area,
+.apexcharts-line {
+  pointer-events: none;
+}
+
+.apexcharts-tooltip.active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip-title {
+  padding: 6px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.apexcharts-tooltip.light .apexcharts-tooltip-title {
+  background: #ECEFF1;
+  border-bottom: 1px solid #ddd;
+}
+.apexcharts-tooltip.dark .apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #222;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.apexcharts-tooltip-text-z-label:empty,
+.apexcharts-tooltip-text-z-value:empty {
+  display: none;
+}
+
+.apexcharts-tooltip-text-value, 
+.apexcharts-tooltip-text-z-value {
+  font-weight: 600;
+}
+
+.apexcharts-tooltip-marker {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 1px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.apexcharts-tooltip-series-group {
+  padding: 0 10px;
+  display: none;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+}
+
+.apexcharts-tooltip-series-group.active .apexcharts-tooltip-marker {
+  opacity: 1;
+}
+.apexcharts-tooltip-series-group.active, .apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 4px;
+}
+.apexcharts-tooltip-y-group {
+  padding: 6px 0 5px;
+}
+.apexcharts-tooltip-candlestick {
+  padding: 4px 8px;
+}
+.apexcharts-tooltip-candlestick > div {
+  margin: 4px 0;
+}
+.apexcharts-tooltip-candlestick span.value {
+  font-weight: bold;
+}
+
+.apexcharts-xaxistooltip {
+  opacity: 0;
+  padding: 9px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+	background: #ECEFF1;
+  border: 1px solid #90A4AE;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xaxistooltip:after, .apexcharts-xaxistooltip:before {
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.apexcharts-xaxistooltip:after {
+	border-color: rgba(236, 239, 241, 0);
+	border-width: 6px;
+	margin-left: -6px;
+}
+.apexcharts-xaxistooltip:before {
+	border-color: rgba(144, 164, 174, 0);
+	border-width: 7px;
+	margin-left: -7px;
+}
+
+.apexcharts-xaxistooltip-bottom:after, .apexcharts-xaxistooltip-bottom:before {
+  bottom: 100%;
+}
+
+.apexcharts-xaxistooltip-bottom:after {
+  border-bottom-color: #ECEFF1;
+}
+.apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-top:after, .apexcharts-xaxistooltip-top:before {
+  top: 100%;
+}
+.apexcharts-xaxistooltip-top:after {
+  border-top-color: #ECEFF1;
+}
+.apexcharts-xaxistooltip-top:before {
+  border-top-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip.active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-yaxistooltip {
+  opacity: 0;
+  padding: 4px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+	background: #ECEFF1;
+  border: 1px solid #90A4AE;
+}
+
+.apexcharts-yaxistooltip:after, .apexcharts-yaxistooltip:before {
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.apexcharts-yaxistooltip:after {
+	border-color: rgba(236, 239, 241, 0);
+	border-width: 6px;
+	margin-top: -6px;
+}
+.apexcharts-yaxistooltip:before {
+	border-color: rgba(144, 164, 174, 0);
+	border-width: 7px;
+	margin-top: -7px;
+}
+
+.apexcharts-yaxistooltip-left:after, .apexcharts-yaxistooltip-left:before {
+  left: 100%;
+}
+.apexcharts-yaxistooltip-left:after {
+  border-left-color: #ECEFF1;
+}
+.apexcharts-yaxistooltip-left:before {
+  border-left-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-right:after, .apexcharts-yaxistooltip-right:before {
+  right: 100%;
+}
+.apexcharts-yaxistooltip-right:after {
+  border-right-color: #ECEFF1;
+}
+.apexcharts-yaxistooltip-right:before {
+  border-right-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip.active {
+  opacity: 1;
+}
+
+.apexcharts-xcrosshairs, .apexcharts-ycrosshairs {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xcrosshairs.active, .apexcharts-ycrosshairs.active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-ycrosshairs-hidden {
+  opacity: 0;
+}
+
+.apexcharts-zoom-rect {
+  pointer-events: none;
+}
+.apexcharts-selection-rect {
+  cursor: move;
+}
+
+.svg_select_points, .svg_select_points_rot {
+  opacity: 0;
+  visibility: hidden;
+}
+.svg_select_points_l, .svg_select_points_r {
+  cursor: ew-resize;
+  opacity: 1;
+  visibility: visible;
+  fill: #888;
+}
+.zoomable .hovering-zoom {
+  cursor: crosshair
+}
+.zoomable .hovering-pan {
+  cursor: move
+}
+
+.apexcharts-xaxis,
+.apexcharts-yaxis {
+  pointer-events: none;
+}
+
+.apexcharts-zoom-icon, 
+.apexcharts-zoom-in-icon,
+.apexcharts-zoom-out-icon,
+.apexcharts-reset-zoom-icon, 
+.apexcharts-pan-icon, 
+.apexcharts-selection-icon,
+.apexcharts-download-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+
+.apexcharts-zoom-icon svg, 
+.apexcharts-zoom-in-icon svg,
+.apexcharts-zoom-out-icon svg,
+.apexcharts-reset-zoom-icon svg,
+.apexcharts-download-icon svg {
+  fill: #6E8192;
+}
+.apexcharts-selection-icon svg {
+  fill: #444;
+  transform: scale(0.86)
+}
+.apexcharts-zoom-icon.selected svg, 
+.apexcharts-selection-icon.selected svg, 
+.apexcharts-reset-zoom-icon.selected svg {
+  fill: #008FFB;
+}
+.apexcharts-selection-icon:not(.selected):hover svg,
+.apexcharts-zoom-icon:not(.selected):hover svg, 
+.apexcharts-zoom-in-icon:hover svg, 
+.apexcharts-zoom-out-icon:hover svg, 
+.apexcharts-reset-zoom-icon:hover svg {
+  fill: #333;
+}
+
+.apexcharts-selection-icon, .apexcharts-download-icon {
+  margin-right: 3px;
+  position: relative;
+  top: 1px;
+}
+.apexcharts-reset-zoom-icon {
+  margin-left: 7px;
+}
+.apexcharts-zoom-icon {
+  transform: scale(1);
+}
+.apexcharts-download-icon {
+  transform: scale(0.9)
+}
+
+.apexcharts-zoom-in-icon, .apexcharts-zoom-out-icon {
+  transform: scale(0.8)
+}
+
+.apexcharts-zoom-out-icon {
+  margin-right: 3px;
+}
+
+.apexcharts-pan-icon {
+  transform: scale(0.72);
+  position: relative;
+  left: 1px;
+  top: 0px;
+}
+.apexcharts-pan-icon svg {
+  fill: #fff;
+  stroke: #6E8192;
+  stroke-width: 2;
+}
+.apexcharts-pan-icon.selected svg {
+  stroke: #008FFB;
+}
+.apexcharts-pan-icon:not(.selected):hover svg {
+  stroke: #333;
+}
+
+.apexcharts-toolbar {
+  position: absolute;
+  z-index: 11;
+  top: 0px;
+  right: 3px;
+  max-width: 176px;
+  text-align: right;
+  border-radius: 3px;
+  padding: 5px 6px 2px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.apexcharts-toolbar svg {
+  pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+  .apexcharts-toolbar {
+    /*opacity: 0;*/
+  }
+
+  .apexcharts-canvas:hover .apexcharts-toolbar {
+    opacity: 1;
+  } 
+}
+
+.apexcharts-datalabel.hidden {
+  opacity: 0;
+}
+
+.apexcharts-pie-label,
+.apexcharts-datalabel, .apexcharts-datalabel-label, .apexcharts-datalabel-value {
+  cursor: default;
+  pointer-events: none;
+}
+
+.apexcharts-pie-label-delay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.apexcharts-showAfterDelay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.apexcharts-hide .apexcharts-series-points {
+  opacity: 0;
+}
+
+.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events {
+  pointer-events: none;
+}
+
+
+/* markers */
+
+.apexcharts-marker {
+  transition: 0.15s ease all;
+}
+
+@keyframes opaque {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}</style><link type="text/css" rel="stylesheet" href="./Studomat - Početna_files/icon" class="_access-material-icons"></head><body id="body" data-ma-theme="green" class="light-mode"><div>
+    <script>
+        function manipSessionAttribute(attr, method) {
+            var csrftoken = "VfJ_gQnc4SHZcHZnsdlV8RUxNU7qjNriygHWJc7tMr1O_Lk-bcUbszu6g0f0QBVX0_RhxnRVGHfauLvPrDLuFfaLBNwsz9hc";
+
+            $.ajax({
+                url: "/studomat/api/session/attribute/" + attr,
+                type: method,
+                data: {'_csrf': csrftoken},
+                success: function (result) {
+                    // Do something with the result
+                }
+            });
+        }
+
+        function addSessionAttribute(attr) {
+            manipSessionAttribute(attr, 'PUT');
+        }
+
+        function removeSessionAttribute(attr) {
+            manipSessionAttribute(attr, 'DELETE');
+        }
+    </script>
+</div>
+
+		<script>
+		   BOOMR.init({
+		       beacon_url: "/studomat/api/boomerang/",
+		       BW: {
+		   		   base_url: "/studomat/boomerang/images/",
+		   		   block_beacon: true
+	           }
+		   });
+
+		   addSessionAttribute('boomerangPodaciPoslani')
+		</script>
+	
+
+
+	<script>
+		  $( document ).ready(function() {
+	         if($("html").data('highcontrast-applied') == true) {
+	       		$('.blockBox').css("background-color", "")
+	         }
+		  });
+	</script>
+	
+	
+    <script src="./Studomat - Početna_files/tether.min-ecdfd3dc464ceda5f483bb5c96a6e3d2.js.download"></script> 
+    <script src="./Studomat - Početna_files/popper-10e487804651fc3e512405727abed0ab.js.download"></script>	
+	<script src="./Studomat - Početna_files/bootstrap.min-f92a3f337500984fbd20487501257dae.js.download"></script>
+	<script src="./Studomat - Početna_files/waves.min-2bff429e1f4236b4f210dc72140961ff.js.download"></script>
+	<script src="./Studomat - Početna_files/jquery.scrollbar.min-b958f1ebea7191578ea94a98825aa46b.js.download"></script>
+	<script src="./Studomat - Početna_files/jquery-scrollLock.min-a6578f6aa6df4eee7ece2cf10ecb57b1.js.download"></script>
+	<script src="./Studomat - Početna_files/sweetalert2.min-4c4e1f6b44d22dcd532c2a4a6688a929.js.download"></script>
+	<script src="./Studomat - Početna_files/app.min-f67388b0d322fe38dafbed833506645f.js.download"></script>
+	<script src="./Studomat - Početna_files/odjavaIspita-e4d1b3d5bff7790ae77502af3b83e009.js.download"></script>
+	
+
+		<link rel="stylesheet" href="./Studomat - Početna_files/all.min-dc93d584e41f8417f6b7163320d34329.css">
+		<link rel="manifest" href="https://www.isvu.hr/studomat/manifest.json">
+		<script src="./Studomat - Početna_files/grafovi-9e78a96567a214be107e6c5a46d41598.js.download"></script>
+		<script src="./Studomat - Početna_files/bowser-2ef227168712a61379d89c7246de9f05.js.download"></script>
+	
+	
+		<main class="main" style="width: auto;">
+		 <a class="skip-main" href="https://www.isvu.hr/studomat/hr/index#main">Skoči na glavni sadržaj </a>
+			 <a class="skip-main" href="https://www.isvu.hr/studomat/hr/index#main">Preskoči navigaciju </a>
+			<div class="page-loader" style="display: none;">
+				<div class="page-loader__spinner">
+					<svg viewBox="25 25 50 50">
+						<circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+					</svg>
+				</div>
+			</div>
+			
+			<header class="header">
+	<div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+		<div class="navigation-trigger__inner">
+			<i class="navigation-trigger__line"></i>
+			<i class="navigation-trigger__line"></i>
+			<i class="navigation-trigger__line"></i>
+		</div>
+	</div>
+	<a href="https://www.isvu.hr/studomat/hr/index#" class="ff">
+	<div class="header__logo">
+		<img class="aa1logo hidden-sm-down" src="./Studomat - Početna_files/logonovi12-51db1e6e5e8f7fb0af08d7a9951a67a6.png" width="180" height="51" alt="logo Studomat">
+		<img class="aa1logo hidden-md-up" src="./Studomat - Početna_files/mobilelogo-a6041c3178ec717de30843c2aefe8c10.png" alt="logo Studomat na manjim rezolucijama">
+	</div>
+	</a>
+	
+	<ul class="top-nav">
+		<li class="dropdown">
+			<a data-toggle="dropdown" class="ff" href="https://www.isvu.hr/studomat/en/index"><img class="jezikIkona" src="./Studomat - Početna_files/hr-48c204f08170fe8e9dae069ea38bff01.png" alt="Ikona za hrvatski jezik" srcset=""></a>
+			
+			<div class="dropdown-menu dropdown-menu-right jezikOdabir square">
+				<a href="https://www.isvu.hr/studomat/hr/index" class="listview__item ff"><img class="jezikIkona" src="./Studomat - Početna_files/hr-48c204f08170fe8e9dae069ea38bff01.png" alt="Ikona za hrvatski jezik" srcset="">Hrvatski</a>
+				<a href="https://www.isvu.hr/studomat/en/index" class="listview__item ff"><img class="jezikIkona" src="./Studomat - Početna_files/eng-36d4e2004ea2b8ac577bbca67d63b336.png" alt="Ikona za engleski jezik" srcset="">English</a>
+			</div>
+		</li>
+	
+		<li class="dropdown ">
+			<a class="ff" href="https://www.isvu.hr/studomat/hr/obavijestiadministratora" aria-label="Obavijesti administratora" title="Obavijesti administratora">
+				<i class="zmdi zmdi-notifications"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+			
+				<aside class="sidebar">
+    <div class="scroll-wrapper scrollbar-inner" style="position: relative;"><div class="scrollbar-inner scroll-content" style="height: 823.5px; margin-bottom: 0px; margin-right: 0px; max-height: none;">
+        <div class="user">
+            <div class="user__info" data-toggle="dropdown">
+                <img class="user__img zmdi zmdi-account-circle" aria-label="Marina Gavranović" title="Marina Gavranović" alt="Marina Gavranović" src="./Studomat - Početna_files/slika">
+                <div class="userWrapper">
+                    <div class="user__name">
+                        <span>Marina Gavranović</span>
+                        
+                    </div>
+                    
+                        <div class="user__email">0067580200 (38279R18)</div>
+                        
+                        <div class="user__email">Ekonomski fakultet</div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <ul id="nav1" class="navigation">
+
+            <li class="Single navigation__sub--active">
+                <a class="ff" aria-label="Početna" title="Početna" href="https://www.isvu.hr/studomat/hr/index"><i class="zmdi zmdi-home"></i><span>Početna</span></a>
+            </li>
+            <li class="navigation__sub">
+                <a class="ff" href="https://www.isvu.hr/studomat/hr/index#"><i class="zmdi zmdi-assignment"></i> <span>Ispiti</span></a>
+                <ul style="display: none;">
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/ispit/ponudapredmetazaprijavuispita" aria-label="Prijava ispita" title="Prijava ispita">Prijava ispita</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/ispit/ponudapredmetazaodjavuispita" aria-label="Odjava ispita" title="Odjava ispita">Odjava ispita</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/ispit/pregledispitautijeku" aria-label="Ispiti u tijeku" title="Ispiti u tijeku">Ispiti u tijeku</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/ispit/pregledispitnihrokova" aria-label="Pregled ispitnih rokova" title="Pregled ispitnih rokova">Pregled ispitnih rokova</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/ispit/pregledsvihispita" aria-label="Pregled ispita" title="Pregled ispita">Pregled ispita</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navigation__sub">
+                <a class="ff" href="https://www.isvu.hr/studomat/hr/index#"><i class="zmdi zmdi-account-box"></i> <span>Podaci o studentu</span></a>
+                <ul>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/student/osobnipodaci/pregled" aria-label="Osobni podaci" title="Osobni podaci">Osobni podaci</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/student/razinapravaprehrane" aria-label="Razina prava na prehranu" title="Razina prava na prehranu">Razina prava na prehranu</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/student/email/zahtjevzaakt" aria-label="E-mail opcije" title="E-mail opcije">E-mail opcije</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/student/mojaaieduhr" aria-label="Moj AAI@EduHr" title="Moj AAI@EduHr">Moj AAI@EduHr</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navigation__sub">
+                <a class="ff" href="https://www.isvu.hr/studomat/hr/index#"><i class="zmdi zmdi-balance"></i> <span>Podaci o studiranju</span></a>
+                <ul>
+
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/pregledstudiranja" aria-label="Pregled podataka o studiranju" title="Pregled podataka o studiranju">Pregled podataka o studiranju</a>
+                    </li>
+
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/upisanegodine" aria-label="Upisane godine i predmeti" title="Upisane godine i predmeti">Upisane godine i predmeti</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/aktivnipredmeti" aria-label="Aktivni predmeti" title="Aktivni predmeti">Aktivni predmeti</a>
+                    </li>
+                    
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/dodatnibodovi" aria-label="Dodatni ECTS bodovi" title="Dodatni ECTS bodovi">Dodatni ECTS bodovi</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/pregledskolarina" aria-label="Pregled školarina" title="Pregled školarina">Pregled školarina</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/izracunparticipacije" aria-label="Pregled izračunatih participacija" title="Pregled izračunatih participacija">Pregled izračunatih participacija</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/pregledboravka" aria-label="Pregled boravka" title="Pregled boravka">Pregled boravka</a>
+                    </li>
+
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/kategorijastudenta" aria-label="Kategorija studenta" title="Kategorija studenta">Kategorija studenta</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navigation__sub">
+                <a class="ff" href="https://www.isvu.hr/studomat/hr/index#"><i class="zmdi zmdi-shield-check"></i> <span>Potvrde</span></a>
+                <ul>
+                    <li>
+                        <a class="ff" href="https://issp.srce.hr/e-potvrda/" aria-label="E-zapis o statusu studenta (e-Građani)" title="E-zapis o statusu studenta (e-Građani)" target="_blank">E-zapis o statusu studenta (e-Građani)</a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            
+
+            <li>
+                <a class="ff" href="https://www.isvu.hr/studomat/hr/ankete/ponudaanketa"><i class="zmdi zmdi-image"></i> <span>Anketa</span></a>
+            </li>
+            <li class="Single">
+                <a class="ff" href="https://wiki.srce.hr/pages/viewpage.action?pageId=25133172" target="_blank"><i class="zmdi zmdi-hospital"></i> <span>Upute</span></a>
+            </li>
+            <li>
+                
+            </li>
+            <hr id="odmak">
+            <!-- 			<li th:if="${#session.getAttribute(T(hr.isvu.studomat.web.util.Keys).clientStudomat)}"> -->
+            <!-- 				<a class="ff" th:aria-label="#{krajRada}" th:title="#{krajRada}" th:href="@{/odjava}"><i class="zmdi zmdi-power"></i> <span th:text="#{krajRada}"></span></a> -->
+
+            <!-- 			</li>			 -->
+
+            <!-- 			<li th:unless="${#session.getAttribute(T(hr.isvu.studomat.web.util.Keys).clientStudomat)}" > -->
+            <li>
+                <form class="ff" action="https://www.isvu.hr/studomat/odjava" method="post" tabindex="0," autofocus="true"><input type="hidden" name="_csrf" value="VfJ_gQnc4SHZcHZnsdlV8RUxNU7qjNriygHWJc7tMr1O_Lk-bcUbszu6g0f0QBVX0_RhxnRVGHfauLvPrDLuFfaLBNwsz9hc">
+                    <i class="zmdi zmdi-power krajRadaIkona"></i><input aria-label="KRAJ RADA" title="KRAJ RADA" class="krajRada ff" type="submit" value="KRAJ RADA">
+                </form>
+            </li>
+        </ul>
+    </div><div class="scroll-element scroll-x"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="width: 106px;"></div></div></div><div class="scroll-element scroll-y"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="height: 99px;"></div></div></div></div>
+</aside>
+
+<script type="application/javascript">
+    if (window.location.href.indexOf("/en/") > -1) {
+        var alertText = 'Warning! If you are using a public computer, we recommend that you <b>close all windows</b> of your internet browser to log out of AAI@EduHr. ';
+        var buttonText = 'Ok';
+    } else {
+        var alertText = 'Upozorenje!  Ukoliko koristite javno računalo preporučamo da <b>zatvorite sve prozore</b> korištenog internet preglednika kako biste se odjavili iz sustava AAI@EduHr. ';
+        var buttonText = 'U redu';
+    }
+
+    var logoutTimer;
+    var windowWidth = $(window).width();
+    if (windowWidth >= 1024) {
+        $('#log').click(function (e) {
+            e.preventDefault();
+            $(".content").append('<div id="wrapDiv" class="card divCover" ><div class="alert alert-danger alert-dismissible al">' + alertText + '<button class="btn btn-primary" id="btnOdjava" onClick="redirect()">' + buttonText + '</button></div></div>');
+            doLogout();
+        });
+
+        function doLogout() {
+            logoutTimer = setTimeout(function () {
+                window.location.href = "/studomat/odjava";
+            }, 7000);
+        }
+
+        function redirect() {
+            window.location.href = "/studomat/odjava";
+        }
+    }
+
+    $('#form input').keydown(function (e) {
+        if (e.keyCode == 13) {
+            $('#form').submit();
+        }
+    });
+</script>
+
+			
+			
+			<section class="content">
+				<header id="main" class="content__title">
+					<h1 id="pozdravnaPoruka">Početna</h1>
+					<small class="subtitleDec" id="kratakOpis"></small>
+					<p class="prijavaVrijeme"><span>Generirano: </span><span>22.12.2024. 12:32</span></p>
+				</header>
+				
+				<div id="browserDetect"></div>
+				<div>
+    <script>
+        function manipSessionAttribute(attr, method) {
+            var csrftoken = "VfJ_gQnc4SHZcHZnsdlV8RUxNU7qjNriygHWJc7tMr1O_Lk-bcUbszu6g0f0QBVX0_RhxnRVGHfauLvPrDLuFfaLBNwsz9hc";
+
+            $.ajax({
+                url: "/studomat/api/session/attribute/" + attr,
+                type: method,
+                data: {'_csrf': csrftoken},
+                success: function (result) {
+                    // Do something with the result
+                }
+            });
+        }
+
+        function addSessionAttribute(attr) {
+            manipSessionAttribute(attr, 'PUT');
+        }
+
+        function removeSessionAttribute(attr) {
+            manipSessionAttribute(attr, 'DELETE');
+        }
+    </script>
+</div>
+
+
+<div class="col-md-6 col-sm-12 col-xs-12 col-lg-6" id="obrisiButton">
+	
+</div>
+
+
+				
+				<div>
+
+    <script>
+        $( document ).ready(function() {
+            "use strict";
+            if(window.orientation == undefined) {
+                if ( bowser.chrome == true) {
+                    console.log("Will the service worker register?");
+                    navigator.serviceWorker.register('/studomat/serviceWorker-4609fa5e1671fd6dc6e7ac8be424afc4.js').then(function(reg) {
+                        console.log("Yes, it did.");
+                    }).catch(function(err) {
+                        console.log("No it didn't. This happened: ", err);
+                    });
+                } else {
+                    $(".a2hs").remove();
+                }
+            } else {
+                $(".a2hs").remove();
+            }
+        });
+
+        var podaciZaLog = new Object();
+        podaciZaLog.appVersion = window.navigator.appVersion;
+        podaciZaLog.language = window.navigator.language;
+        podaciZaLog.platform = window.navigator.platform;
+        podaciZaLog.product = window.navigator.product;
+        podaciZaLog.userAgent = window.navigator.userAgent;
+        podaciZaLog.vendor = window.navigator.vendor;
+        console.log(podaciZaLog);
+        
+        window.addEventListener('appinstalled', function(evt) {
+            $.post({
+                "url": "/studomat/a2hs/studomatjeinstaliran",
+                "data": JSON.stringify(podaciZaLog),
+                "contentType": "application/json; charset=utf-8"
+            });
+            console.log('A2HS installed');
+        });            
+    </script>
+        
+    <script>
+        "use strict";
+
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            console.log('display-mode is standalone');
+            $.post({
+                "url": "/studomat/a2hs/studentkoristiinstaliranistudomat",
+                "data": JSON.stringify(podaciZaLog),
+                "contentType": "application/json; charset=utf-8"
+            });
+            document.querySelector('.a2hs').remove();
+        } 
+        // safari
+        else if (window.navigator.standalone === true) {
+            console.log('display-mode is standalone');
+            $.post({
+                "url": "/studomat/a2hs/studentkoristiinstaliranistudomat",
+                "data": JSON.stringify(podaciZaLog),
+                "contentType": "application/json; charset=utf-8"
+            });
+            document.querySelector('.a2hs').remove();
+        } else {
+            $.post({
+                "url": "/studomat/a2hs/studentkoristiwebstudomat",
+                "data": JSON.stringify(podaciZaLog),
+                "contentType": "application/json; charset=utf-8"
+            });
+        }
+    </script>
+    
+    <script>
+		$(document).ready(function(){
+		    $(".izracun").remove();
+		});
+		</script>
+
+	
+
+		
+			
+		
+
+		<div>
+    <script>
+        function manipSessionAttribute(attr, method) {
+            var csrftoken = "VfJ_gQnc4SHZcHZnsdlV8RUxNU7qjNriygHWJc7tMr1O_Lk-bcUbszu6g0f0QBVX0_RhxnRVGHfauLvPrDLuFfaLBNwsz9hc";
+
+            $.ajax({
+                url: "/studomat/api/session/attribute/" + attr,
+                type: method,
+                data: {'_csrf': csrftoken},
+                success: function (result) {
+                    // Do something with the result
+                }
+            });
+        }
+
+        function addSessionAttribute(attr) {
+            manipSessionAttribute(attr, 'PUT');
+        }
+
+        function removeSessionAttribute(attr) {
+            manipSessionAttribute(attr, 'DELETE');
+        }
+    </script>
+</div>
+			
+		<script>
+			"use strict";
+
+			// Code to handle install prompt on desktop
+			var deferredPrompt;
+			var addBtn = document.querySelector('.a2hs-button');
+			var addDiv = document.querySelector('.a2hs');
+	
+			if (addDiv) {
+			    addDiv.style.display = 'none';
+			    // alert("addDiv.style.display =  none ;");
+			    window.addEventListener('beforeinstallprompt', function(e) {
+			    	// alert("window.addEventListener( beforeinstallprompt , function(e) {");
+			        // Prevent Chrome 67 and earlier from automatically showing the prompt
+			        e.preventDefault();
+			        // Stash the event so it can be triggered later.
+			        deferredPrompt = e;
+			        // Update UI to notify the user they can add to home screen
+			        addDiv.style.display = 'block';
+			        $.post({
+			            "url": "/studomat/a2hs/prikazanaopcijazaaddtohomescreen",
+			            "data": JSON.stringify(podaciZaLog),
+			            "contentType": "application/json; charset=utf-8"
+			        });
+			        addBtn.addEventListener('click', function(e) {
+			        	// alert("addBtn.addEventListener( click , function(e) {");
+			            // // hide our user interface that shows our A2HS button
+			            // addDiv.style.display = 'none';
+			            // Show the prompt
+			            deferredPrompt.prompt();
+			            // Wait for the user to respond to the prompt
+			            deferredPrompt.userChoice.then(function(choiceResult) {
+			                if (choiceResult.outcome === 'accepted') {
+			                    console.log('User accepted the A2HS prompt');
+			                    $.post({
+			                        "url": "/studomat/a2hs/studentprihvatioinstalacijustudomata",
+			                        "data": JSON.stringify(podaciZaLog),
+			                        "contentType": "application/json; charset=utf-8"
+			                    });
+			                    addDiv.remove();
+			                } else {
+			                    console.log('User dismissed the A2HS prompt');
+			                    $.post({
+			                        "url": "/studomat/a2hs/studentodbioinstalacijustudomata",
+			                        "data": JSON.stringify(podaciZaLog),
+			                        "contentType": "application/json; charset=utf-8"
+			                    });
+			                    addDiv.style.display = 'block';
+			                }
+	
+			                deferredPrompt = null;
+			            });
+			        });
+			    });
+			}
+
+			addSessionAttribute('addtoHomeScreen');
+		</script>
+	
+
+	
+	
+  
+
+    <div class="modal" id="modal-default" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title pull-left">Prijava ispita</h5>
+                </div>
+                <div class="modal-body">Želite li prihvatiti ocjenu s kojom ste oslobođeni od dijela ispita? Upozorenje: Ako odaberete Ne oslobođenje vam više neće vrijediti.</div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>    
+
+    <div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header ">
+                        <h2 class="card-title">Prijava ispita</h2>
+                    </div>
+                    <div class="card-block">
+                        <div class="row  price-table price-table--basic">
+
+                            
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-xl-3 ">
+                                    <div class="price-table__item">
+                                        <header class="price-table__header bg-light-blue">
+                                            <div class="price-table__title">
+                                                <span>Matematika</span>
+                                                
+                                                
+                                                <br><span>(142282)</span>
+                                            </div>
+                                            <div class="price-table__desc datumRokPocetna">Datum roka: 28.1.2025.</div>
+                                        </header>
+                                        
+                                        
+
+                                        <form action="https://www.isvu.hr/studomat/hr/ispit/prijavaispita" method="post" class="formaIspit formaPrijavaIspit"><input type="hidden" name="_csrf" value="VfJ_gQnc4SHZcHZnsdlV8RUxNU7qjNriygHWJc7tMr1O_Lk-bcUbszu6g0f0QBVX0_RhxnRVGHfauLvPrDLuFfaLBNwsz9hc"> 
+											<input hidden="hidden" name="sifraPredmeta" aria-label="Šifra predmeta" title="Šifra predmeta" value="142282">
+											<input hidden="hidden" name="datumRoka" aria-label="Datum roka" title="Datum roka" value="28.01.2025.">
+											<input hidden="hidden" name="prijaveDo" aria-label="Prijave do" title="Prijave do" value="24.01.2025. 23:59:00">
+											<input hidden="hidden" name="akgodinaOslobodjenje" aria-label="Akademska godina oslobođenja" title="Akademska godina oslobođenja" value="">
+											<input hidden="hidden" name="iskoristiOslobodjenje" aria-label="Iskoristi oslobođenje" title="iskoristiOslobodjenje" value="false">
+											<button aria-label="Prijava ispita: Matematika" title="Prijava ispita: Matematika" type="submit" class="btn btn-primary waves-effect isp">Prijavi ispit</button>
+                                        </form>
+
+                                        
+                                        
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-xl-3 ">
+                                    <div class="price-table__item">
+                                        <header class="price-table__header bg-light-blue">
+                                            <div class="price-table__title">
+                                                <span>Matematika</span>
+                                                
+                                                
+                                                <br><span>(142282)</span>
+                                            </div>
+                                            <div class="price-table__desc datumRokPocetna">Datum roka: 11.2.2025.</div>
+                                        </header>
+                                        
+                                        
+
+                                        <form action="https://www.isvu.hr/studomat/hr/ispit/prijavaispita" method="post" class="formaIspit formaPrijavaIspit"><input type="hidden" name="_csrf" value="VfJ_gQnc4SHZcHZnsdlV8RUxNU7qjNriygHWJc7tMr1O_Lk-bcUbszu6g0f0QBVX0_RhxnRVGHfauLvPrDLuFfaLBNwsz9hc"> 
+											<input hidden="hidden" name="sifraPredmeta" aria-label="Šifra predmeta" title="Šifra predmeta" value="142282">
+											<input hidden="hidden" name="datumRoka" aria-label="Datum roka" title="Datum roka" value="11.02.2025.">
+											<input hidden="hidden" name="prijaveDo" aria-label="Prijave do" title="Prijave do" value="07.02.2025. 23:59:00">
+											<input hidden="hidden" name="akgodinaOslobodjenje" aria-label="Akademska godina oslobođenja" title="Akademska godina oslobođenja" value="">
+											<input hidden="hidden" name="iskoristiOslobodjenje" aria-label="Iskoristi oslobođenje" title="iskoristiOslobodjenje" value="false">
+											<button aria-label="Prijava ispita: Matematika" title="Prijava ispita: Matematika" type="submit" class="btn btn-primary waves-effect isp">Prijavi ispit</button>
+                                        </form>
+
+                                        
+                                        
+                                    </div>
+                                </div>
+                            
+                        </div>
+                        <a href="https://www.isvu.hr/studomat/hr/ispit/ponudapredmetazaprijavuispita">
+                            <button aria-label="Ponuda svih rokova i predmeta za prijavu ispita" class="btn btn-outline-primary btn--icon-text waves-effect buttonVisePocetna" title="Ponuda svih rokova i predmeta za prijavu ispita">Ponuda svih rokova i predmeta za prijavu ispita</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div class="row">
+           
+	
+		
+		
+
+		<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 col-xl-6">
+				
+					<div class="card">
+						<div class="card-header ">
+							<h2 class="card-title">Poslovna ekonomija</h2>
+						</div>
+						
+						
+							
+							<div class="card-block" style="width: 100%;">
+								<div class="card widget-ratings">
+	<div class="card-header text-center">
+		<h2 class="card-title">Usporedba upisanih/osvojenih ECTS bodova s generacijom</h2>
+		
+	</div>
+	<div class="card-block">
+		<div class="widget-ratings__item">
+			<div class="chartWrapper">
+				<div id="chartECTSN" style="min-height: 364px;"><div id="apexchartsacimji51" class="apexcharts-canvas apexchartsacimji51" style="width: 291px; height: 350px;"><svg id="SvgjsSvg1606" width="291" height="350" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG1609" class="apexcharts-legend" transform="translate(0, -7)"><text id="SvgjsText1612" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="100.9232406616211" y="341.7777845594618" text-anchor="start" dominate-baseline="central" class="apexcharts-legend-text apexcharts-legend-series" rel="1" data:collapsed="false" style="font-size: 12px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);">Obavljeno</text><rect id="SvgjsRect1611" width="11.6" height="11.6" x="10.2" y="338.2" rx="2" ry="2" fill="#0066cc" opacity="1" stroke-width="0" stroke-dasharray="0" cx="16" cy="344" class="apexcharts-legend-point" fill-opacity="1" stroke-opacity="1" rel="1" data:collapsed="false" transform="translate(72.9232406616211,-8.222215440538195)"></rect><text id="SvgjsText1615" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="183.9232406616211" y="341.7777845594618" text-anchor="start" dominate-baseline="central" class="apexcharts-legend-text apexcharts-legend-series" rel="2" data:collapsed="false" style="font-size: 12px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);">Upisano</text><rect id="SvgjsRect1614" width="11.6" height="11.6" x="93.2" y="338.2" rx="2" ry="2" fill="#fd9603" opacity="1" stroke-width="0" stroke-dasharray="0" cx="99" cy="344" class="apexcharts-legend-point" fill-opacity="1" stroke-opacity="1" rel="2" data:collapsed="false" transform="translate(72.9232406616211,-8.222215440538195)"></rect></g><g id="SvgjsG1608" class="apexcharts-inner apexcharts-graphical" transform="translate(65.75, 40)"><defs id="SvgjsDefs1607"><lineargradient id="SvgjsLinearGradient1618" x1="0" y1="0" x2="0" y2="1"><stop id="SvgjsStop1619" stop-opacity="0.4" stop-color="rgba(216,227,240,0.4)" offset="0"></stop><stop id="SvgjsStop1620" stop-opacity="0.5" stop-color="rgba(190,209,230,0.5)" offset="1"></stop><stop id="SvgjsStop1621" stop-opacity="0.5" stop-color="rgba(190,209,230,0.5)" offset="1"></stop></lineargradient><clippath id="gridRectMaskacimji51"><rect id="SvgjsRect1623" width="215.25" height="248.547951171875" x="0" y="0" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clippath></defs><rect id="SvgjsRect1622" width="29.596875" height="248.547951171875" x="0" y="0" rx="0" ry="0" fill="url(#SvgjsLinearGradient1618)" opacity="1" stroke-width="0" stroke-dasharray="0" class="apexcharts-xcrosshairs" filter="none" fill-opacity="0.9"></rect><g id="SvgjsG1649" class="apexcharts-xaxis"><g id="SvgjsG1650" class="apexcharts-xaxis-texts-g" transform="translate(0, -4)"><text id="SvgjsText1651" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="53.8125" y="277.547951171875" text-anchor="middle" dominate-baseline="central" class="apexcharts-xaxis-label apexcharts-xaxis-label" style="font-size: 12px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);"><tspan id="SvgjsTspan1652" style="font-family: Helvetica, Arial, sans-serif;">Student</tspan><title>Student</title></text><text id="SvgjsText1653" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="161.4375" y="277.547951171875" text-anchor="middle" dominate-baseline="central" class="apexcharts-xaxis-label apexcharts-xaxis-label" style="font-size: 12px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);"><tspan id="SvgjsTspan1654" style="font-family: Helvetica, Arial, sans-serif;">Generacija</tspan><title>Generacija</title></text></g><line id="SvgjsLine1655" x1="0" y1="249.547951171875" x2="215.25" y2="249.547951171875" stroke="#78909c" stroke-dasharray="0" stroke-width="1"></line></g><g id="SvgjsG1665" class="apexcharts-grid"><line id="SvgjsLine1666" x1="107.625" y1="249.547951171875" x2="107.625" y2="255.547951171875" stroke="#78909c" stroke-dasharray="0" class="apexcharts-xaxis-tick"></line><line id="SvgjsLine1667" x1="0" y1="0" x2="215.25" y2="0" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine1668" x1="0" y1="41.424658528645836" x2="215.25" y2="41.424658528645836" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine1669" x1="0" y1="82.84931705729167" x2="215.25" y2="82.84931705729167" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine1670" x1="0" y1="124.2739755859375" x2="215.25" y2="124.2739755859375" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine1671" x1="0" y1="165.69863411458334" x2="215.25" y2="165.69863411458334" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine1672" x1="0" y1="207.12329264322918" x2="215.25" y2="207.12329264322918" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine1673" x1="0" y1="248.547951171875" x2="215.25" y2="248.547951171875" stroke="#e0e0e0" stroke-dasharray="0" class="apexcharts-gridline"></line><line id="SvgjsLine1675" x1="0" y1="248.547951171875" x2="215.25" y2="248.547951171875" stroke="transparent" stroke-dasharray="0"></line><line id="SvgjsLine1674" x1="0" y1="1" x2="0" y2="248.547951171875" stroke="transparent" stroke-dasharray="0"></line></g><g id="SvgjsG1624" class="apexcharts-bar-series apexcharts-plot-series" clip-path="url(#gridRectMaskacimji51)"><g id="SvgjsG1625" class="apexcharts-series" rel="1" data:realIndex="0"><path id="apexcharts-bar-area-0" d="M 24.215625 248.547951171875L 24.215625 53.16164511176214L 51.8125 53.16164511176214L 51.8125 248.547951171875L 24.215625 248.547951171875" fill="rgba(0,102,204,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" pathTo="M 24.215625 248.547951171875L 24.215625 53.16164511176214L 51.8125 53.16164511176214L 51.8125 248.547951171875L 24.215625 248.547951171875" pathFrom="M 24.215625 248.547951171875L 24.215625 248.547951171875L 51.8125 248.547951171875L 51.8125 248.547951171875L 24.215625 248.547951171875" cy="53.16164511176214" cx="130.840625" j="0" val="283" barWidth="29.596875"></path><path id="apexcharts-bar-area-0" d="M 131.840625 248.547951171875L 131.840625 55.92328901367188L 159.4375 55.92328901367188L 159.4375 248.547951171875L 131.840625 248.547951171875" fill="rgba(0,102,204,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" pathTo="M 131.840625 248.547951171875L 131.840625 55.92328901367188L 159.4375 55.92328901367188L 159.4375 248.547951171875L 131.840625 248.547951171875" pathFrom="M 131.840625 248.547951171875L 131.840625 248.547951171875L 159.4375 248.547951171875L 159.4375 248.547951171875L 131.840625 248.547951171875" cy="55.92328901367188" cx="238.465625" j="1" val="279" barWidth="29.596875"></path><g id="SvgjsG1626" class="apexcharts-datalabels"><g id="SvgjsG1629" class="apexcharts-data-labels"><text id="SvgjsText1631" font-family="Noto, sans-serif" family="Noto, sans-serif" x="38.01406249999999" y="157.85479814181858" text-anchor="middle" dominate-baseline="central" class="apexcharts-datalabel" cx="38.01406249999999" cy="157.85479814181858" style="font-size: 12px; font-family: Noto, sans-serif; fill: rgb(255, 255, 255);">283</text></g><g id="SvgjsG1634" class="apexcharts-data-labels"><text id="SvgjsText1636" font-family="Noto, sans-serif" family="Noto, sans-serif" x="145.6390625" y="159.23562009277344" text-anchor="middle" dominate-baseline="central" class="apexcharts-datalabel" cx="145.6390625" cy="159.23562009277344" style="font-size: 12px; font-family: Noto, sans-serif; fill: rgb(255, 255, 255);">279</text></g></g></g><g id="SvgjsG1637" class="apexcharts-series" rel="2" data:realIndex="1"><path id="apexcharts-bar-area-1" d="M 53.8125 248.547951171875L 53.8125 37.28219267578126L 81.409375 37.28219267578126L 81.409375 248.547951171875L 53.8125 248.547951171875" fill="rgba(253,150,3,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" pathTo="M 53.8125 248.547951171875L 53.8125 37.28219267578126L 81.409375 37.28219267578126L 81.409375 248.547951171875L 53.8125 248.547951171875" pathFrom="M 53.8125 248.547951171875L 53.8125 248.547951171875L 81.409375 248.547951171875L 81.409375 248.547951171875L 53.8125 248.547951171875" cy="37.28219267578126" cx="160.4375" j="0" val="306" barWidth="29.596875"></path><path id="apexcharts-bar-area-1" d="M 161.4375 248.547951171875L 161.4375 38.24876804144964L 189.034375 38.24876804144964L 189.034375 248.547951171875L 161.4375 248.547951171875" fill="rgba(253,150,3,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" pathTo="M 161.4375 248.547951171875L 161.4375 38.24876804144964L 189.034375 38.24876804144964L 189.034375 248.547951171875L 161.4375 248.547951171875" pathFrom="M 161.4375 248.547951171875L 161.4375 248.547951171875L 189.034375 248.547951171875L 189.034375 248.547951171875L 161.4375 248.547951171875" cy="38.24876804144964" cx="268.0625" j="1" val="304.6" barWidth="29.596875"></path><g id="SvgjsG1638" class="apexcharts-datalabels"><g id="SvgjsG1641" class="apexcharts-data-labels"><text id="SvgjsText1643" font-family="Noto, sans-serif" family="Noto, sans-serif" x="67.6109375" y="149.91507192382812" text-anchor="middle" dominate-baseline="central" class="apexcharts-datalabel" cx="67.6109375" cy="149.91507192382812" style="font-size: 12px; font-family: Noto, sans-serif; fill: rgb(255, 255, 255);">306</text></g><g id="SvgjsG1646" class="apexcharts-data-labels"><text id="SvgjsText1648" font-family="Noto, sans-serif" family="Noto, sans-serif" x="175.2359375" y="150.39835960666232" text-anchor="middle" dominate-baseline="central" class="apexcharts-datalabel" cx="175.2359375" cy="150.39835960666232" style="font-size: 12px; font-family: Noto, sans-serif; fill: rgb(255, 255, 255);">304.6</text></g></g></g></g><line id="SvgjsLine1676" x1="0" y1="0" x2="215.25" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine1677" x1="0" y1="0" x2="215.25" y2="0" stroke-dasharray="0" stroke-width="0" class="apexcharts-ycrosshairs-hidden"></line><g id="SvgjsG1678" class="apexcharts-yaxis-annotations"></g><g id="SvgjsG1679" class="apexcharts-xaxis-annotations"></g><g id="SvgjsG1680" class="apexcharts-point-annotations"></g></g><g id="SvgjsG1656" class="apexcharts-yaxis" rel="0" transform="translate(30.75, 0)"><g id="SvgjsG1657" class="apexcharts-yaxis-texts-g"><text id="SvgjsText1658" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="20" y="41.6" text-anchor="end" dominate-baseline="central" class="apexcharts-yaxis-label apexcharts-yaxis-label" style="font-size: 11px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);">360.00</text><text id="SvgjsText1659" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="20" y="83.12465852864582" text-anchor="end" dominate-baseline="central" class="apexcharts-yaxis-label apexcharts-yaxis-label" style="font-size: 11px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);">300.00</text><text id="SvgjsText1660" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="20" y="124.64931705729165" text-anchor="end" dominate-baseline="central" class="apexcharts-yaxis-label apexcharts-yaxis-label" style="font-size: 11px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);">240.00</text><text id="SvgjsText1661" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="20" y="166.17397558593748" text-anchor="end" dominate-baseline="central" class="apexcharts-yaxis-label apexcharts-yaxis-label" style="font-size: 11px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);">180.00</text><text id="SvgjsText1662" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="20" y="207.6986341145833" text-anchor="end" dominate-baseline="central" class="apexcharts-yaxis-label apexcharts-yaxis-label" style="font-size: 11px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);">120.00</text><text id="SvgjsText1663" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="20" y="249.22329264322914" text-anchor="end" dominate-baseline="central" class="apexcharts-yaxis-label apexcharts-yaxis-label" style="font-size: 11px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);">60.00</text><text id="SvgjsText1664" font-family="Helvetica, Arial, sans-serif" family="Helvetica, Arial, sans-serif" x="20" y="290.747951171875" text-anchor="end" dominate-baseline="central" class="apexcharts-yaxis-label apexcharts-yaxis-label" style="font-size: 11px; font-family: Helvetica, Arial, sans-serif; fill: rgb(55, 61, 63);">0.00</text></g></g></svg><div class="apexcharts-tooltip light"><div class="apexcharts-tooltip-title"></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(0, 102, 204);"></span><div class="apexcharts-tooltip-text"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(253, 150, 3);"></span><div class="apexcharts-tooltip-text"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div></div></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+/*<![CDATA[*/
+var options = {
+    chart: {
+        height: 350,
+        type: 'bar',
+        animations: {
+            enabled: true,
+            easing: 'easeinout',
+            speed: 2000,
+            animateGradually: {
+                enabled: true,
+                delay: 150
+            },
+            dynamicAnimation: {
+                enabled: true,
+                speed: 350
+            }
+        }
+    },
+    plotOptions: {
+        bar: {
+            horizontal: false,
+            columnWidth: '55%',
+        },
+    },
+    dataLabels: {
+        enabled: true,
+        style: {
+            fontSize: '19px',
+            fontFamily: 'Noto, sans-serif',
+           
+        }
+    },
+    stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent']
+    },
+    series: [{
+        name: "Obavljeno",
+        data: [  283.0, 279.0]
+    }
+   
+        , {
+        name: "Upisano",
+        data: [  306.0, 304.6]
+    }],
+    xaxis: {
+        categories: [ "Student", "Generacija" ],
+    },
+    colors: ['#0066cc', '#fd9603', '#343c49'],
+
+    fill: {
+        opacity: 1
+
+    },
+    tooltip: {
+        y: {
+            formatter: function (val) {
+                return " " + val + " "
+            }
+        }
+    },
+    
+    responsive: [
+        {
+          breakpoint: 768,
+          options: {
+        	  dataLabels: {
+        	        enabled: true,
+        	        style: {
+        	            fontSize: '12px',
+        	            fontFamily: 'Noto, sans-serif',
+        	           
+        	        }
+        	    },
+          
+          }
+        }
+      ]
+    
+}
+
+
+var chartECTSN = new ApexCharts(
+	document.querySelector("#chartECTSN"),
+	options
+);
+
+chartECTSN.render();
+
+
+/*]]>*/
+
+</script>
+							</div>
+							
+							
+						
+							
+						<a href="https://www.isvu.hr/studomat/hr/studiranje/pregledstudiranja" class="ja2">
+						 <button class="btn btn-outline-primary btn--icon-text waves-effect grafvisepocetna" aria-label="Pregled podataka o studiranju" title="Pregled podataka o studiranju">Pregled podataka o studiranju</button>
+						</a>
+				
+					</div>
+		</div>	
+	
+
+    <!--Prikaz školarina -->
+    
+    <!--prikaz školarina kraj -->
+	   
+	  	</div>  
+    
+	<div>
+<script>
+/*<![CDATA[*/
+$(document).on('submit','form.formaPrijavaIspit',function(e){
+    e.preventDefault();
+    var inputOslobodjenje = $(e.currentTarget).closest("form").find("input[name='iskoristiOslobodjenje']");
+    $(e.currentTarget).find("button").attr("disabled", true);
+    var forma = $(e.currentTarget).closest("form");
+    if (inputOslobodjenje.val() == "true"){
+        document.querySelector("#modal-default .modal-footer").innerHTML = '<button type="button" class="btn btn-link" id="daOslobodjenje">Da</button><button type="button" class="btn btn-link" id="neOslobodjenje">Ne</button><button type="button" class="btn btn-link" data-dismiss="modal">Odustani</button>';
+        $('#modal-default').modal("show");
+        
+        $("#daOslobodjenje").click(function(){
+            $("#daOslobodjenje").attr("disabled", true);
+            $("#neOslobodjenje").attr("disabled", true);
+            $("#daOslobodjenje").html('<i class="fa fa-spinner fa-spin spinButton"></i> Pričekajte...');
+            $.ajax({
+                "data": forma.serialize(),
+                 "method": "POST",
+                 "url": forma.attr("action")
+             }).done(function(data) {
+                 location.href = data;
+             });
+         });
+         $("#neOslobodjenje").click(function(){
+             $("#daOslobodjenje").attr("disabled", true);
+             $("#neOslobodjenje").attr("disabled", true);
+             $("#neOslobodjenje").html('<i class="fa fa-spinner fa-spin spinButton"></i> Pričekajte...');
+             inputOslobodjenje.val("false");
+             $.ajax({
+                 "data": forma.serialize(),
+                 "method": "POST",
+                 "url": forma.attr("action")
+             }).done(function(data) {
+                 location.href = data;
+             });    
+         });
+    } else {
+    	$(e.currentTarget).find("button").html('<i class="fa fa-spinner fa-spin spinButton"></i> Pričekajte...');
+    	inputOslobodjenje.val("");
+        $.ajax({
+            "data": forma.serialize(),
+            "method": "POST",
+            "url": forma.attr("action")
+        }).done(function(data) {
+            location.href = data;
+        });    
+    }
+});
+
+$('#modal-default').on('hide.bs.modal', function (e) {
+    $("button.isp").attr("disabled", false)
+})
+/*]]>*/
+</script>
+</div>
+
+
+	
+
+</div>
+				
+				
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footerProfil hidden-lg-up">
+		<p>
+			<span>Marina Gavranović - 0067580200</span>
+			<span> / Ekonomski fakultet</span>
+		</p>
+	</div>
+   <p>Fiksni tečaj konverzije 1 € = 7,53450 Kn</p>
+	
+	                   <div>
+							<a href="https://www.srce.unizg.hr/" target="_blank">
+								<img class="srcko" alt="Logo Sveučilišni računski centar - Srce" src="./Studomat - Početna_files/Logo-Srce.png" style="
+							    margin-bottom: 10px;
+							    width: 90px;">
+							</a>
+							                     
+		                    <a class="Isvu" href="https://www.isvu.hr/javno/hr/index.shtml" target="_blank">
+								<img class="isvu" src="./Studomat - Početna_files/isvu_logo-67ed05cc64dfb3768bcdade524304fce.png" alt="Logo Informacijski Sustav Visokih Učilišta" style="
+								    margin-bottom: 10px;
+								    width: 85px;">
+							</a>
+	                        
+		   
+		                    
+	                   </div>
+	
+	<p><a class="izjava" href="https://www.isvu.hr/studomat/hr/izjava-o-pristupacnosti">Izjava o pristupačnosti</a></p>
+	
+	<p></p>
+	
+	<p>2024.12.2</p>
+	
+</footer>
+		
+			
+						<script src="./Studomat - Početna_files/accessibility.min-a8a574c33946e77df98f0ec5e1df6009.js.download"></script>
+							<script> 
+							var options = {
+								    icon: {
+								    	circular: true,
+								    	img: 'accessibility',
+								        position: {
+					
+								        	bottom: { 
+								        		size: 50, 
+								        		units: 'px'	
+								        	},
+					
+								            right: {
+								                size: 0,
+								                units: 'px'
+								            },
+								            type: 'fixed'
+								        }
+								    }
+								}
+					
+								new Accessibility(options);
+						</script><style class="_access-main-css">
+        ._access-icon {
+            position: fixed;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+            opacity: 0;
+            transition-duration: .5s;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .circular._access-icon {
+            border-radius: 50%;
+        }
+        ._access-menu {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            position: fixed;
+            width: 25vw;
+            height: auto;
+            transition-duration: .5s;
+            z-index: 99991;
+            opacity: 1;
+            background-color: #fff;
+            color: #000;
+            border-radius: 3px;
+            border: solid 1px #f1f0f1;
+            font-family: RobotoDraft, Roboto, sans-serif, Arial;
+            min-width: 300px;
+            box-shadow: 0px 0px 1px #aaa;
+            max-height: 100vh;
+            
+        }
+        ._access-menu._access-close {
+            z-index: -1;
+            opacity: 0;
+            background-color: transparent;
+        }
+        ._access-menu.bottom {
+            bottom: 0;
+        }
+        ._access-menu.top {
+            top: 0;
+        }
+        ._access-menu.left {
+            left: 0;
+        }
+        ._access-menu._access-close.left {
+            left: -25vw;
+        }
+        ._access-menu.right {
+            right: 0;
+        }
+        ._access-menu._access-close.right {
+            right: -25vw;
+        }
+        ._access-menu ._text-center {
+            text-align: center;
+        }
+        ._access-menu h3 {
+            font-size: 24px !important;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0;
+            color: rgba(0,0,0,.87);
+        }
+        ._access-menu ._menu-close-btn {
+            left: 5px;
+            color: #d63c3c;
+        }
+        ._access-menu ._menu-reset-btn {
+            right: 5px;
+            color: #4054b2;
+        }
+        ._access-menu ._menu-btn {
+            position: absolute;
+            top: 5px;
+            cursor: pointer;
+            font-size: 24px !important;
+            font-weight: bold;
+        }
+        ._access-menu ul {
+            padding: 0;
+            position: relative;
+            font-size: 18px !important;
+            margin: 0;
+        }
+        ._access-menu ul li {
+            list-style-type: none;
+            cursor: pointer;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            border: solid 1px #f1f0f1;
+            padding: 10px 0 10px 30px;
+            margin: 5px;
+            border-radius: 4px;
+            transition-property: opacity;
+            transition-duration: .5s;
+            transition-timing-function: ease-in-out;
+            font-size: 18px !important;
+            line-height: 18px !important;
+            text-indent: 5px;
+            background: #f9f9f9;
+            color: rgba(0,0,0,.6);
+        }
+        ._access-menu ul li[data-access-action="resetText"] {
+            display: none;
+        }
+        ._access-menu ul.before-collapse li {
+            opacity: 0.05;
+        }
+        ._access-menu ul li.active, ._access-menu ul li.active:hover {
+            color: #fff;
+            background-color: #000;
+        }
+        ._access-menu ul li:hover {
+            color: rgba(0,0,0,.8);
+            background-color: #eaeaea;
+        }
+        ._access-menu ul li.not-supported {
+            display: none;
+        }
+        ._access-menu ul li:before {
+            content: ' ';
+            font-family: 'Material Icons';
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "liga" 1;
+            font-style: normal;
+            text-transform: none;
+            line-height: 1;
+            font-size: 24px !important;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            left: 8px;
+            position: absolute;
+            color: rgba(0,0,0,.6);
+            direction: ltr;
+        }
+        ._access-menu ul li .tick {
+            font-family: 'Material Icons';
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "liga" 1;
+            font-style: normal;
+            font-size: 24px !important;
+            text-transform: none;
+            display: none;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0,0,0,.6);
+            direction: ltr;
+            margin-left: 5px;
+        }
+        [data-increasetext-applied] [data-access-action="increaseText"] .tick {
+            display: inline-block;
+        }
+        [data-increasetext-applied] ._access-menu ul li[data-access-action="resetText"] {
+            display: block;
+        }
+        [data-highcontrast-applied] [data-access-action="highContrast"] .tick {
+            display: inline-block;
+        }
+        [data-highcontrastwhite-applied] [data-access-action="highContrastWhite"] .tick {
+            display: inline-block;
+        }
+        [data-dyslexic-applied] [data-access-action="dyslexicFont"] .tick {
+            display: inline-block;
+        }
+        [data-underline-applied] [data-access-action="underlineLinks"] .tick {
+            display: inline-block;
+        }
+        html[data-highcontrast-applied][data-highcontrastwhite-applied] ._access-menu ul li:before,
+        html[data-highcontrast-applied][data-highcontrastwhite-applied] ._access-menu ul li .tick {
+            color: rgba(255,255,255,.6);
+        }
+        ._access-menu ul li[data-access-action="increaseText"]:before {
+            content: 'zoom_in';
+        }
+        ._access-menu ul li[data-access-action="resetText"]:before {
+            content: 'settings_backup_restore';
+        }
+        ._access-menu ul li[data-access-action="highContrast"]:before {
+            content: 'hdr_strong';
+        }
+        ._access-menu ul li[data-access-action="highContrastWhite"]:before {
+            content: 'hdr_weak';
+        }
+        ._access-menu ul li[data-access-action="dyslexicFont"]:before {
+            content: 'font_download';
+        }
+        ._access-menu ul li[data-access-action="underlineLinks"]:before {
+            content: 'format_underlined';
+        }
+        ._access-menu p {
+            margin: 10px;
+            padding: 0;
+            color: rgba(0,0,0,.87);
+        }
+        ._access-menu p button {
+            display: block;
+            margin-top: 10px;
+        }
+        ._access-menu p {
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            transition-property: opacity;
+            transition-duration: .5s;
+            transition-timing-function: ease-in-out;
+        }
+        ._access-menu p.before-collapse {
+            opacity: 0;
+        }
+        </style><i class="_access-icon material-icons _access circular" style="width: 50px; height: 50px; font-size: 50px; background-color: rgb(64, 84, 178); color: rgb(255, 255, 255); bottom: 50px; right: 0px; z-index: 9999; opacity: 1;">accessibility</i><div class="_access-menu _access-close _access bottom right type"><h3 class="_text-center"><i class="_menu-close-btn _menu-btn material-icons">close</i>Pristupačnost<i class="_menu-reset-btn _menu-btn material-icons">refresh</i></h3><ul class="before-collapse"><li data-access-action="increaseText">Povećaj veličinu fonta<span class="tick">done_outline</span></li><li data-access-action="resetText">Poništi veličinu fonta<span class="tick">done_outline</span></li><li data-access-action="highContrast">Kontrast (crna pozadina)<span class="tick">done_outline</span></li><li data-access-action="highContrastWhite">Kontrast (bijela pozadina)<span class="tick">done_outline</span></li><li data-access-action="dyslexicFont">Disleksija<span class="tick">done_outline</span></li><li data-access-action="underlineLinks">Podcrtaj linkove<span class="tick">done_outline</span></li></ul><p class="before-collapse">Ako želite spremiti trajne postavke, kliknite Spremi, ako ne - vaše će se postavke poništiti kad zatvorite preglednik.<button data-access-action="saveSettings" disabled="disabled">Spremi</button></p></div>	
+			
+		<script src="./Studomat - Početna_files/bowser-2ef227168712a61379d89c7246de9f05.js.download"></script>
+        <script>
+			if (window.location.href.indexOf("/en/") > -1) {
+		 		var alertText = 'You are using an outdated version of the browser. Supported internet browsers that are able to display all parts of the interface with full functionality are the current versions of Google Chrome, Microsoft Edge and Mozilla Firefox.';
+		 	}
+		 	else {
+		 		var alertText = 'Koristite zastarjelu verziju preglednika. Podržani internet preglednici koji su u mogucnosti prikazati sve dijelove sucelja uz cjelovitu funkcionalnost su aktualne verzije Google Chrome-a, Microsoft Edge-a te Mozilla Firefox-a.';
+			}
+			 
+            if (bowser.msie && bowser.version <= 10) {
+                browserDetect.innerHTML +=
+                	'<div class="alert alert-danger">'+ alertText +'</div>';
+            }
+
+            if (bowser.opera && bowser.version <= 45) {
+                browserDetect.innerHTML +=
+                	'<div class="alert alert-danger">'+ alertText +'</div>';
+            }
+
+            if (bowser.chrome && bowser.version <= 60) {
+                browserDetect.innerHTML +=
+                	'<div class="alert alert-danger">'+ alertText +'</div>';
+            }
+
+            if (bowser.firefox && bowser.version <= 52) {
+                browserDetect.innerHTML +=
+                	'<div class="alert alert-danger">'+ alertText +'</div>';
+            }
+            if (bowser.safari && bowser.version <= 9) {
+                browserDetect.innerHTML +=
+                	'<div class="alert alert-danger">'+ alertText +'</div>';
+            }
+        </script>
+        <script>
+        
+        $(document).ready(function() {
+        	
+            if(typeof $("html").attr("data-highcontrast-applied"))
+            {
+                $(".crvena").attr("style", "");
+                $(".narancasta").attr("style", "");
+            }   
+        });
+
+        
+        </script>
+	
+
+<svg id="SvgjsSvg1076" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1077"></defs><polyline id="SvgjsPolyline1078" points="0,0"></polyline><path id="SvgjsPath1079" d="M0 0 "></path></svg><div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"><div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div></div></body></html>
