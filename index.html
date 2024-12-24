@@ -1126,14 +1126,6 @@ var options = {
     
 }
 
-
-var chartECTSN = new ApexCharts(
-	document.querySelector("#chartECTSN"),
-	options
-);
-
-chartECTSN.render();
-
 $(document).on('submit','form.formaPrijavaIspit',function(e){
     e.preventDefault();
     var inputOslobodjenje = $(e.currentTarget).closest("form").find("input[name='iskoristiOslobodjenje']");
@@ -1231,7 +1223,7 @@ $('#modal-default').on('hide.bs.modal', function (e) {
 </footer>
 		
 			
-						<script src="./files/accessibility.min-a8a574c33946e77df98f0ec5e1df6009.js.download"></script>
+						<!-- <script src="./files/accessibility.min-a8a574c33946e77df98f0ec5e1df6009.js"></script> -->
 							<script> 
 							var options = {
 								    icon: {
@@ -1253,7 +1245,6 @@ $('#modal-default').on('hide.bs.modal', function (e) {
 								    }
 								}
 					
-								new Accessibility(options);
 						</script><style class="_access-main-css">
         ._access-icon {
             position: fixed;
