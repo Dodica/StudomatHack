@@ -1469,39 +1469,6 @@ $('#modal-default').on('hide.bs.modal', function (e) {
         }
         </style><i class="_access-icon material-icons _access circular" style="width: 50px; height: 50px; font-size: 50px; background-color: rgb(64, 84, 178); color: rgb(255, 255, 255); bottom: 50px; right: 0px; z-index: 9999; opacity: 1;">accessibility</i><div class="_access-menu _access-close _access bottom right type"><h3 class="_text-center"><i class="_menu-close-btn _menu-btn material-icons">close</i>Pristupačnost<i class="_menu-reset-btn _menu-btn material-icons">refresh</i></h3><ul class="before-collapse"><li data-access-action="increaseText">Povećaj veličinu fonta<span class="tick">done_outline</span></li><li data-access-action="resetText">Poništi veličinu fonta<span class="tick">done_outline</span></li><li data-access-action="highContrast">Kontrast (crna pozadina)<span class="tick">done_outline</span></li><li data-access-action="highContrastWhite">Kontrast (bijela pozadina)<span class="tick">done_outline</span></li><li data-access-action="dyslexicFont">Disleksija<span class="tick">done_outline</span></li><li data-access-action="underlineLinks">Podcrtaj linkove<span class="tick">done_outline</span></li></ul><p class="before-collapse">Ako želite spremiti trajne postavke, kliknite Spremi, ako ne - vaše će se postavke poništiti kad zatvorite preglednik.<button data-access-action="saveSettings" disabled="disabled">Spremi</button></p></div>	
 			
-		<script src="./files/bowser-2ef227168712a61379d89c7246de9f05.js.download"></script>
-        <script>
-			if (window.location.href.indexOf("/en/") > -1) {
-		 		var alertText = 'You are using an outdated version of the browser. Supported internet browsers that are able to display all parts of the interface with full functionality are the current versions of Google Chrome, Microsoft Edge and Mozilla Firefox.';
-		 	}
-		 	else {
-		 		var alertText = 'Koristite zastarjelu verziju preglednika. Podržani internet preglednici koji su u mogucnosti prikazati sve dijelove sucelja uz cjelovitu funkcionalnost su aktualne verzije Google Chrome-a, Microsoft Edge-a te Mozilla Firefox-a.';
-			}
-			 
-            if (bowser.msie && bowser.version <= 10) {
-                browserDetect.innerHTML +=
-                	'<div class="alert alert-danger">'+ alertText +'</div>';
-            }
-
-            if (bowser.opera && bowser.version <= 45) {
-                browserDetect.innerHTML +=
-                	'<div class="alert alert-danger">'+ alertText +'</div>';
-            }
-
-            if (bowser.chrome && bowser.version <= 60) {
-                browserDetect.innerHTML +=
-                	'<div class="alert alert-danger">'+ alertText +'</div>';
-            }
-
-            if (bowser.firefox && bowser.version <= 52) {
-                browserDetect.innerHTML +=
-                	'<div class="alert alert-danger">'+ alertText +'</div>';
-            }
-            if (bowser.safari && bowser.version <= 9) {
-                browserDetect.innerHTML +=
-                	'<div class="alert alert-danger">'+ alertText +'</div>';
-            }
-        </script>
         <script>
         
         $(document).ready(function() {
