@@ -612,16 +612,16 @@
     <div class="scroll-wrapper scrollbar-inner" style="position: relative;"><div class="scrollbar-inner scroll-content" style="height: 823.5px; margin-bottom: 0px; margin-right: 0px; max-height: none;">
         <div class="user">
             <div class="user__info" data-toggle="dropdown">
-                <img class="user__img zmdi zmdi-account-circle" aria-label="Marina Gavranović" title="Marina Gavranović" alt="Marina Gavranović" src="./Studomat - Početna_files/slika">
+                <img class="user__img zmdi zmdi-account-circle" aria-label="Marina Gavranović" title="Marina Gavranović" alt="Marina Gavranović" src="./Studomat - Početna_files/slika.jpg">
                 <div class="userWrapper">
                     <div class="user__name">
-                        <span>Marina Gavranović</span>
+                        <span>Filip Rebrović</span>
                         
                     </div>
                     
-                        <div class="user__email">0067580200 (38279R18)</div>
+                        <div class="user__email">0035212648 (38279R18)</div>
                         
-                        <div class="user__email">Ekonomski fakultet</div>
+                        <div class="user__email">Akademija likovnih umjetnosti</div>
                     
                 </div>
             </div>
@@ -782,12 +782,33 @@
 				<header id="main" class="content__title">
 					<h1 id="pozdravnaPoruka">Početna</h1>
 					<small class="subtitleDec" id="kratakOpis"></small>
-					<p class="prijavaVrijeme"><span>Generirano: </span><span>22.12.2024. 12:32</span></p>
+					<p class="prijavaVrijeme"><span>Generirano: </span><span id="generatedTime"></span></p>
 				</header>
 				
 				<div id="browserDetect"></div>
 				<div>
     <script>
+                // Function to format the date and time
+                function formatDateTime(date) {
+                const day = String(date.getDate()).padStart(2, '0');
+                const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+                const year = date.getFullYear();
+                const hours = String(date.getHours()).padStart(2, '0');
+                const minutes = String(date.getMinutes()).padStart(2, '0');
+                return `${day}.${month}.${year}. ${hours}:${minutes}`;
+            }
+
+            // Update the "Generirano" field
+            function updateGeneratedTime() {
+                const now = new Date();
+                const generatedTimeElement = document.getElementById("generatedTime");
+                if (generatedTimeElement) {
+                    generatedTimeElement.textContent = formatDateTime(now);
+                }
+            }
+
+            // Call the function to set the current time
+            updateGeneratedTime();
         function manipSessionAttribute(attr, method) {
             var csrftoken = "VfJ_gQnc4SHZcHZnsdlV8RUxNU7qjNriygHWJc7tMr1O_Lk-bcUbszu6g0f0QBVX0_RhxnRVGHfauLvPrDLuFfaLBNwsz9hc";
 
@@ -924,71 +945,6 @@
         }
     </script>
 </div>
-			
-		<script>
-			"use strict";
-
-			// Code to handle install prompt on desktop
-			var deferredPrompt;
-			var addBtn = document.querySelector('.a2hs-button');
-			var addDiv = document.querySelector('.a2hs');
-	
-			if (addDiv) {
-			    addDiv.style.display = 'none';
-			    // alert("addDiv.style.display =  none ;");
-			    window.addEventListener('beforeinstallprompt', function(e) {
-			    	// alert("window.addEventListener( beforeinstallprompt , function(e) {");
-			        // Prevent Chrome 67 and earlier from automatically showing the prompt
-			        e.preventDefault();
-			        // Stash the event so it can be triggered later.
-			        deferredPrompt = e;
-			        // Update UI to notify the user they can add to home screen
-			        addDiv.style.display = 'block';
-			        $.post({
-			            "url": "/studomat/a2hs/prikazanaopcijazaaddtohomescreen",
-			            "data": JSON.stringify(podaciZaLog),
-			            "contentType": "application/json; charset=utf-8"
-			        });
-			        addBtn.addEventListener('click', function(e) {
-			        	// alert("addBtn.addEventListener( click , function(e) {");
-			            // // hide our user interface that shows our A2HS button
-			            // addDiv.style.display = 'none';
-			            // Show the prompt
-			            deferredPrompt.prompt();
-			            // Wait for the user to respond to the prompt
-			            deferredPrompt.userChoice.then(function(choiceResult) {
-			                if (choiceResult.outcome === 'accepted') {
-			                    console.log('User accepted the A2HS prompt');
-			                    $.post({
-			                        "url": "/studomat/a2hs/studentprihvatioinstalacijustudomata",
-			                        "data": JSON.stringify(podaciZaLog),
-			                        "contentType": "application/json; charset=utf-8"
-			                    });
-			                    addDiv.remove();
-			                } else {
-			                    console.log('User dismissed the A2HS prompt');
-			                    $.post({
-			                        "url": "/studomat/a2hs/studentodbioinstalacijustudomata",
-			                        "data": JSON.stringify(podaciZaLog),
-			                        "contentType": "application/json; charset=utf-8"
-			                    });
-			                    addDiv.style.display = 'block';
-			                }
-	
-			                deferredPrompt = null;
-			            });
-			        });
-			    });
-			}
-
-			addSessionAttribute('addtoHomeScreen');
-		</script>
-	
-
-	
-	
-  
-
     <div class="modal" id="modal-default" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1016,7 +972,7 @@
                                     <div class="price-table__item">
                                         <header class="price-table__header bg-light-blue">
                                             <div class="price-table__title">
-                                                <span>Matematika</span>
+                                                <span>Analiza animiranog filma</span>
                                                 
                                                 
                                                 <br><span>(142282)</span>
@@ -1032,7 +988,7 @@
 											<input hidden="hidden" name="prijaveDo" aria-label="Prijave do" title="Prijave do" value="24.01.2025. 23:59:00">
 											<input hidden="hidden" name="akgodinaOslobodjenje" aria-label="Akademska godina oslobođenja" title="Akademska godina oslobođenja" value="">
 											<input hidden="hidden" name="iskoristiOslobodjenje" aria-label="Iskoristi oslobođenje" title="iskoristiOslobodjenje" value="false">
-											<button aria-label="Prijava ispita: Matematika" title="Prijava ispita: Matematika" type="submit" class="btn btn-primary waves-effect isp">Prijavi ispit</button>
+											<button aria-label="Prijava ispita: Analiza animiranog filma" title="Prijava ispita: Analiza animiranog filma" type="submit" class="btn btn-primary waves-effect isp">Prijavi ispit</button>
                                         </form>
 
                                         
@@ -1044,7 +1000,7 @@
                                     <div class="price-table__item">
                                         <header class="price-table__header bg-light-blue">
                                             <div class="price-table__title">
-                                                <span>Matematika</span>
+                                                <span>Analiza animiranog filma</span>
                                                 
                                                 
                                                 <br><span>(142282)</span>
@@ -1060,7 +1016,7 @@
 											<input hidden="hidden" name="prijaveDo" aria-label="Prijave do" title="Prijave do" value="07.02.2025. 23:59:00">
 											<input hidden="hidden" name="akgodinaOslobodjenje" aria-label="Akademska godina oslobođenja" title="Akademska godina oslobođenja" value="">
 											<input hidden="hidden" name="iskoristiOslobodjenje" aria-label="Iskoristi oslobođenje" title="iskoristiOslobodjenje" value="false">
-											<button aria-label="Prijava ispita: Matematika" title="Prijava ispita: Matematika" type="submit" class="btn btn-primary waves-effect isp">Prijavi ispit</button>
+											<button aria-label="Prijava ispita: Analiza animiranog filma" title="Prijava ispita: Analiza animiranog filma" type="submit" class="btn btn-primary waves-effect isp">Prijavi ispit</button>
                                         </form>
 
                                         
@@ -1087,7 +1043,7 @@
 				
 					<div class="card">
 						<div class="card-header ">
-							<h2 class="card-title">Poslovna ekonomija</h2>
+							<h2 class="card-title">Animirani film i novi mediji</h2>
 						</div>
 						
 						
@@ -1199,32 +1155,6 @@ var chartECTSN = new ApexCharts(
 
 chartECTSN.render();
 
-
-/*]]>*/
-
-</script>
-							</div>
-							
-							
-						
-							
-						<a href="https://www.isvu.hr/studomat/hr/studiranje/pregledstudiranja" class="ja2">
-						 <button class="btn btn-outline-primary btn--icon-text waves-effect grafvisepocetna" aria-label="Pregled podataka o studiranju" title="Pregled podataka o studiranju">Pregled podataka o studiranju</button>
-						</a>
-				
-					</div>
-		</div>	
-	
-
-    <!--Prikaz školarina -->
-    
-    <!--prikaz školarina kraj -->
-	   
-	  	</div>  
-    
-	<div>
-<script>
-/*<![CDATA[*/
 $(document).on('submit','form.formaPrijavaIspit',function(e){
     e.preventDefault();
     var inputOslobodjenje = $(e.currentTarget).closest("form").find("input[name='iskoristiOslobodjenje']");
