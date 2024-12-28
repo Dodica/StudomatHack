@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://www.isvu.hr/studomat/hr/student/osobnipodaci/pregled -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 		
+ 		<title>Studomat - Pregled osobnih podataka</title>
+		
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#0066CC">
+	<meta name="description" content="Studomat je modul Informacijskog sustava visokih učilišta (ISVU) namijenjen studentima. Pomoću Studomata: prijavljuju/odjavljuju ispite, pregledavaju raspored za pismeni ispit, rezultate pismenih ispita, nalaze raspored za usmeni ispit, upisuju godinu, biraju izborne predmete, upisuju predmeta na vlastiti zahtjev, zahtijevaju ispis raznih potvrda, imaju uvid u financijske obveze.">
+	<meta name="author" content="Sveučilište u Zagrebu Sveučilišni računski centar Srce ">
+	<link rel="stylesheet" href="./Studomat - Pregled osobnih podataka_files/material-design-iconic-font.min-e9365fe85b7e4db79a87015e52c3db6c.css">
+	<link rel="stylesheet" href="./Studomat - Pregled osobnih podataka_files/app.min-0b71340737a719277313aa273822ffb5.css">
+	<link rel="stylesheet" href="./Studomat - Pregled osobnih podataka_files/studomat-6df04272e7230142e82bec409a35911d.css">
+	<link rel="stylesheet" href="./Studomat - Pregled osobnih podataka_files/animate.min-178b651958ceff556cbc5f355e08bbf1.css">
+	<link rel="stylesheet" href="./Studomat - Pregled osobnih podataka_files/jquery.scrollbar-e98a484d945fac2621fdc1a7e9b01667.css">
+	<link rel="stylesheet" href="./Studomat - Pregled osobnih podataka_files/sweetalert2.min-dc807f10cd754074e826fd108d9161fc.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="https://www.isvu.hr/studomat/img/icons/ios/57-ec52de669e4767db81eeec557a96a6e3.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://www.isvu.hr/studomat/img/icons/ios/60-486131fc3be908f473bb030fcbc5fc6b.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://www.isvu.hr/studomat/img/icons/ios/72-b0426744672475fb3a9c1a2b1a279dee.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.isvu.hr/studomat/img/icons/ios/76-24ba17a0d009eaf99f3f2e32a4e6a4e7.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://www.isvu.hr/studomat/img/icons/ios/114-c5374ef08201970bd53e96c9484011c9.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.isvu.hr/studomat/img/icons/ios/120-681e0ba4c3f7d84b9b93ba35b92eef9e.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://www.isvu.hr/studomat/img/icons/ios/144-57193c7f64182bfddd51aa49455025b7.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.isvu.hr/studomat/img/icons/ios/152-c28c0dd91b5bf94615d49cbdf9e9c6ac.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.isvu.hr/studomat/img/icons/ios/180-9f88e568966924c32a2a91cae0f43f7f.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="https://www.isvu.hr/studomat/img/android-icon-192x192-01db03b08b543f0203378556410ba5aa.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.isvu.hr/studomat/img/favicon-32x32-04f51568784f4ee50400de592744fb1c.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://www.isvu.hr/studomat/img/favicon-96x96-9538865498aff870a6ec0ba25a241c0f.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.isvu.hr/studomat/img/favicon-16x16-de7d25dedbaa96575625b530deeb59b3.png">
+	<meta name="theme-color" content="#ffffff">
+	
+
+
+		
+	<!-- Vendors -->
+	<script src="./Studomat - Pregled osobnih podataka_files/jquery.min-c9f5aeeca3ad37bf2aa006139b935f0a.js.download"></script>
+	<!-- Javascript -->
+	
+
+
+	<script>
+		  $( document ).ready(function() {
+	         if($("html").data('highcontrast-applied') == true) {
+	       		$('.blockBox').css("background-color", "")
+	         }
+		  });
+	</script>
+	
+	
+    <script src="./Studomat - Pregled osobnih podataka_files/tether.min-ecdfd3dc464ceda5f483bb5c96a6e3d2.js.download"></script> 
+    <script src="./Studomat - Pregled osobnih podataka_files/popper-10e487804651fc3e512405727abed0ab.js.download"></script>	
+	<script src="./Studomat - Pregled osobnih podataka_files/bootstrap.min-f92a3f337500984fbd20487501257dae.js.download"></script>
+	<script src="./Studomat - Pregled osobnih podataka_files/waves.min-2bff429e1f4236b4f210dc72140961ff.js.download"></script>
+	<script src="./Studomat - Pregled osobnih podataka_files/jquery.scrollbar.min-b958f1ebea7191578ea94a98825aa46b.js.download"></script>
+	<script src="./Studomat - Pregled osobnih podataka_files/jquery-scrollLock.min-a6578f6aa6df4eee7ece2cf10ecb57b1.js.download"></script>
+	<script src="./Studomat - Pregled osobnih podataka_files/sweetalert2.min-4c4e1f6b44d22dcd532c2a4a6688a929.js.download"></script>
+	<script src="./Studomat - Pregled osobnih podataka_files/app.min-f67388b0d322fe38dafbed833506645f.js.download"></script>
+	<script src="./Studomat - Pregled osobnih podataka_files/odjavaIspita-e4d1b3d5bff7790ae77502af3b83e009.js.download"></script>
+	
+
+		<link rel="stylesheet" href="./Studomat - Pregled osobnih podataka_files/select2.min-d44571114a90b9226cd654d3c7d9442c.css" type="text/css">
+		<script src="./Studomat - Pregled osobnih podataka_files/select2.full.min-da607360bcc65284a197ada3d68d5439.js.download"></script>
+	<link type="text/css" rel="stylesheet" href="./Studomat - Pregled osobnih podataka_files/icon" class="_access-material-icons"></head>
+	<body id="body" data-ma-theme="green" class="light-mode">
+		<main class="main" style="width: auto;">
+		 <a class="skip-main" href="https://www.isvu.hr/studomat/hr/student/osobnipodaci/pregled#main">Skoči na glavni sadržaj </a>
+			 <a class="skip-main" href="https://www.isvu.hr/studomat/hr/student/osobnipodaci/pregled#main">Preskoči navigaciju </a>
+			<div class="page-loader" style="display: none;">
+				<div class="page-loader__spinner">
+					<svg viewBox="25 25 50 50">
+						<circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+					</svg>
+				</div>
+			</div>
+			
+			<header class="header">
+	<div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+		<div class="navigation-trigger__inner">
+			<i class="navigation-trigger__line"></i>
+			<i class="navigation-trigger__line"></i>
+			<i class="navigation-trigger__line"></i>
+		</div>
+	</div>
+	<a href="https://www.isvu.hr/studomat/hr/student/osobnipodaci/pregled#" class="ff">
+	<div class="header__logo">
+		<img class="aa1logo hidden-sm-down" src="./Studomat - Pregled osobnih podataka_files/logonovi12-51db1e6e5e8f7fb0af08d7a9951a67a6.png" width="180" height="51" alt="logo Studomat">
+		<img class="aa1logo hidden-md-up" src="./Studomat - Pregled osobnih podataka_files/mobilelogo-a6041c3178ec717de30843c2aefe8c10.png" alt="logo Studomat na manjim rezolucijama">
+	</div>
+	</a>
+	
+	<ul class="top-nav">
+		<li class="dropdown">
+			<a data-toggle="dropdown" class="ff" href="https://www.isvu.hr/studomat/en/index"><img class="jezikIkona" src="./Studomat - Pregled osobnih podataka_files/hr-48c204f08170fe8e9dae069ea38bff01.png" alt="Ikona za hrvatski jezik" srcset=""></a>
+			
+			<div class="dropdown-menu dropdown-menu-right jezikOdabir square">
+				<a href="https://www.isvu.hr/studomat/hr/index" class="listview__item ff"><img class="jezikIkona" src="./Studomat - Pregled osobnih podataka_files/hr-48c204f08170fe8e9dae069ea38bff01.png" alt="Ikona za hrvatski jezik" srcset="">Hrvatski</a>
+				<a href="https://www.isvu.hr/studomat/en/index" class="listview__item ff"><img class="jezikIkona" src="./Studomat - Pregled osobnih podataka_files/eng-36d4e2004ea2b8ac577bbca67d63b336.png" alt="Ikona za engleski jezik" srcset="">English</a>
+			</div>
+		</li>
+	
+		<li class="dropdown ">
+			<a class="ff" href="https://www.isvu.hr/studomat/hr/obavijestiadministratora" aria-label="Obavijesti administratora" title="Obavijesti administratora">
+				<i class="zmdi zmdi-notifications"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+			
+				<aside class="sidebar">
+    <div class="scroll-wrapper scrollbar-inner" style="position: relative;"><div class="scrollbar-inner scroll-content" style="height: 848.5px; margin-bottom: 0px; margin-right: 0px; max-height: none;">
+        <div class="user">
+            <div class="user__info" data-toggle="dropdown">
+                <img class="user__img zmdi zmdi-account-circle" aria-label="Marina Gavranović" title="Marina Gavranović" alt="Marina Gavranović" src="./Studomat - Pregled osobnih podataka_files/slika">
+                <div class="userWrapper">
+                    <div class="user__name">
+                        <span>Marina Gavranović</span>
+                        
+                    </div>
+                    
+                        <div class="user__email">0067580200 (38279R18)</div>
+                        
+                        <div class="user__email">Ekonomski fakultet</div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <ul id="nav1" class="navigation">
+
+            <li class="Single">
+                <a class="ff" aria-label="Početna" title="Početna" href="https://www.isvu.hr/studomat/hr/index"><i class="zmdi zmdi-home"></i><span>Početna</span></a>
+            </li>
+            <li class="navigation__sub">
+                <a class="ff" href="https://www.isvu.hr/studomat/hr/student/osobnipodaci/pregled#"><i class="zmdi zmdi-assignment"></i> <span>Ispiti</span></a>
+                <ul>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/ispit/ponudapredmetazaprijavuispita" aria-label="Prijava ispita" title="Prijava ispita">Prijava ispita</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/ispit/ponudapredmetazaodjavuispita" aria-label="Odjava ispita" title="Odjava ispita">Odjava ispita</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/ispit/pregledispitautijeku" aria-label="Ispiti u tijeku" title="Ispiti u tijeku">Ispiti u tijeku</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/ispit/pregledispitnihrokova" aria-label="Pregled ispitnih rokova" title="Pregled ispitnih rokova">Pregled ispitnih rokova</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/ispit/pregledsvihispita" aria-label="Pregled ispita" title="Pregled ispita">Pregled ispita</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navigation__sub navigation__sub--active">
+                <a class="ff" href="https://www.isvu.hr/studomat/hr/student/osobnipodaci/pregled#"><i class="zmdi zmdi-account-box"></i> <span>Podaci o studentu</span></a>
+                <ul>
+                    <li class="navigation__sub--active">
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/student/osobnipodaci/pregled" aria-label="Osobni podaci" title="Osobni podaci">Osobni podaci</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/student/razinapravaprehrane" aria-label="Razina prava na prehranu" title="Razina prava na prehranu">Razina prava na prehranu</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/student/email/zahtjevzaakt" aria-label="E-mail opcije" title="E-mail opcije">E-mail opcije</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/student/mojaaieduhr" aria-label="Moj AAI@EduHr" title="Moj AAI@EduHr">Moj AAI@EduHr</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navigation__sub">
+                <a class="ff" href="https://www.isvu.hr/studomat/hr/student/osobnipodaci/pregled#"><i class="zmdi zmdi-balance"></i> <span>Podaci o studiranju</span></a>
+                <ul>
+
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/pregledstudiranja" aria-label="Pregled podataka o studiranju" title="Pregled podataka o studiranju">Pregled podataka o studiranju</a>
+                    </li>
+
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/upisanegodine" aria-label="Upisane godine i predmeti" title="Upisane godine i predmeti">Upisane godine i predmeti</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/aktivnipredmeti" aria-label="Aktivni predmeti" title="Aktivni predmeti">Aktivni predmeti</a>
+                    </li>
+                    
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/dodatnibodovi" aria-label="Dodatni ECTS bodovi" title="Dodatni ECTS bodovi">Dodatni ECTS bodovi</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/pregledskolarina" aria-label="Pregled školarina" title="Pregled školarina">Pregled školarina</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/izracunparticipacije" aria-label="Pregled izračunatih participacija" title="Pregled izračunatih participacija">Pregled izračunatih participacija</a>
+                    </li>
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/pregledboravka" aria-label="Pregled boravka" title="Pregled boravka">Pregled boravka</a>
+                    </li>
+
+                    <li>
+                        <a class="ff" href="https://www.isvu.hr/studomat/hr/studiranje/kategorijastudenta" aria-label="Kategorija studenta" title="Kategorija studenta">Kategorija studenta</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navigation__sub">
+                <a class="ff" href="https://www.isvu.hr/studomat/hr/student/osobnipodaci/pregled#"><i class="zmdi zmdi-shield-check"></i> <span>Potvrde</span></a>
+                <ul>
+                    <li>
+                        <a class="ff" href="https://issp.srce.hr/e-potvrda/" aria-label="E-zapis o statusu studenta (e-Građani)" title="E-zapis o statusu studenta (e-Građani)" target="_blank">E-zapis o statusu studenta (e-Građani)</a>
+                    </li>
+                    
+                    
+                </ul>
+            </li>
+            
+            
+
+            <li>
+                <a class="ff" href="https://www.isvu.hr/studomat/hr/ankete/ponudaanketa"><i class="zmdi zmdi-image"></i> <span>Anketa</span></a>
+            </li>
+            <li class="Single">
+                <a class="ff" href="https://wiki.srce.hr/pages/viewpage.action?pageId=25133172" target="_blank"><i class="zmdi zmdi-hospital"></i> <span>Upute</span></a>
+            </li>
+            <li>
+                
+            </li>
+            <hr id="odmak">
+            <!-- 			<li th:if="${#session.getAttribute(T(hr.isvu.studomat.web.util.Keys).clientStudomat)}"> -->
+            <!-- 				<a class="ff" th:aria-label="#{krajRada}" th:title="#{krajRada}" th:href="@{/odjava}"><i class="zmdi zmdi-power"></i> <span th:text="#{krajRada}"></span></a> -->
+
+            <!-- 			</li>			 -->
+
+            <!-- 			<li th:unless="${#session.getAttribute(T(hr.isvu.studomat.web.util.Keys).clientStudomat)}" > -->
+            <li>
+                <form class="ff" action="https://www.isvu.hr/studomat/odjava" method="post" tabindex="0," autofocus="true"><input type="hidden" name="_csrf" value="ExTqRR7BfrLx0RKOWeG8lA9OuZvcuO4lO5_cUGQOtxJ9xll9IXbSJn3yGIPc6HO6O8yIoG4olKLogNkIWaflaVQ50SFNo2hE">
+                    <i class="zmdi zmdi-power krajRadaIkona"></i><input aria-label="KRAJ RADA" title="KRAJ RADA" class="krajRada ff" type="submit" value="KRAJ RADA">
+                </form>
+            </li>
+        </ul>
+    </div><div class="scroll-element scroll-x" style=""><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="width: 106px;"></div></div></div><div class="scroll-element scroll-y" style=""><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="height: 99px;"></div></div></div></div>
+</aside>
+
+<script type="application/javascript">
+    if (window.location.href.indexOf("/en/") > -1) {
+        var alertText = 'Warning! If you are using a public computer, we recommend that you <b>close all windows</b> of your internet browser to log out of AAI@EduHr. ';
+        var buttonText = 'Ok';
+    } else {
+        var alertText = 'Upozorenje!  Ukoliko koristite javno računalo preporučamo da <b>zatvorite sve prozore</b> korištenog internet preglednika kako biste se odjavili iz sustava AAI@EduHr. ';
+        var buttonText = 'U redu';
+    }
+
+    var logoutTimer;
+    var windowWidth = $(window).width();
+    if (windowWidth >= 1024) {
+        $('#log').click(function (e) {
+            e.preventDefault();
+            $(".content").append('<div id="wrapDiv" class="card divCover" ><div class="alert alert-danger alert-dismissible al">' + alertText + '<button class="btn btn-primary" id="btnOdjava" onClick="redirect()">' + buttonText + '</button></div></div>');
+            doLogout();
+        });
+
+        function doLogout() {
+            logoutTimer = setTimeout(function () {
+                window.location.href = "/studomat/odjava";
+            }, 7000);
+        }
+
+        function redirect() {
+            window.location.href = "/studomat/odjava";
+        }
+    }
+
+    $('#form input').keydown(function (e) {
+        if (e.keyCode == 13) {
+            $('#form').submit();
+        }
+    });
+</script>
+
+			
+			
+			<section class="content">
+				<header id="main" class="content__title">
+					<h1 id="pozdravnaPoruka">Pregled osobnih podataka</h1>
+					<small class="subtitleDec" id="kratakOpis"></small>
+					<p class="prijavaVrijeme"><span>Generirano: </span><span>26.12.2024. 14:07</span></p>
+				</header>
+				
+				<div id="browserDetect"></div>
+				<div>
+    <script>
+        function manipSessionAttribute(attr, method) {
+            var csrftoken = "ExTqRR7BfrLx0RKOWeG8lA9OuZvcuO4lO5_cUGQOtxJ9xll9IXbSJn3yGIPc6HO6O8yIoG4olKLogNkIWaflaVQ50SFNo2hE";
+
+            $.ajax({
+                url: "/studomat/api/session/attribute/" + attr,
+                type: method,
+                data: {'_csrf': csrftoken},
+                success: function (result) {
+                    // Do something with the result
+                }
+            });
+        }
+
+        function addSessionAttribute(attr) {
+            manipSessionAttribute(attr, 'PUT');
+        }
+
+        function removeSessionAttribute(attr) {
+            manipSessionAttribute(attr, 'DELETE');
+        }
+    </script>
+</div>
+
+
+
+
+
+				
+				<div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h2 class="card-title">Podaci za akademsku godinu 2024./2025.</h2>
+					<h5 class="card-subitle">Opći podaci o studentu</h5>
+				</div>
+				
+				<div class="card-block">
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Mjesto rođenja</label>
+								<br><b><span class="osobniPodaciPregled">10000 Zagreb, Republika Hrvatska</span></b>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label style="margin-right: 5px">Narodnost</label>
+								<span class="osobniPodaciPregled">podatak nije evidentiran</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label style="margin-right: 5px">Telefon</label>
+								<span class="osobniPodaciPregled">podatak nije evidentiran</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-block">
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Status stanovanja</label>
+								<span class="osobniPodaciPregled">kod roditelja</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Zdravstveno osiguranje</label>
+								<span class="osobniPodaciPregled">po ocu</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Koje ste se godine prvi put upisali na ovu vrstu studija?</label>
+								<span class="osobniPodaciPregled">2018</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Studirate li paralelno na još nekome visokom učilištu?</label>
+								<span class="osobniPodaciPregled">ne</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Primate li stipendiju?</label>
+								<span class="osobniPodaciPregled">ne</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Adresa u mjestu prebivanja</label>
+								<br><b><span class="osobniPodaciPregled">II Baošićki odvojak 16, 10000 Zagreb, Republika Hrvatska</span></b>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Adresa u mjestu stanovanja</label>
+								<br><b><span class="osobniPodaciPregled">podatak nije evidentiran</span></b>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-header">
+					<h5 class="card-subitle">Podaci o uzdržavatelju</h5>
+				</div>
+				<div class="card-block">
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Uzdržavatelj</label>
+								<span class="osobniPodaciPregled">oba roditelja</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Zanimanje - uzdržavatelj</label>
+								<span class="osobniPodaciPregled">trgovinska i uslužna zanimanja</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Položaj u zanimanju - uzdržavatelj</label>
+								<span class="osobniPodaciPregled">Zaposlenik (osoba koja prima plaću)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-header">
+					<h5 class="card-subitle">Podaci o roditeljima</h5>
+				</div>
+				<div class="card-block">
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Postignuto obrazovanje - majka</label>
+								<span class="osobniPodaciPregled">Srednja škola</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Zanimanje - majka</label>
+								<span class="osobniPodaciPregled">trgovinska i uslužna zanimanja</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Položaj u zanimanju - majka</label>
+								<span class="osobniPodaciPregled">Zaposlenik (osoba koja prima plaću)</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Postignuto obrazovanje - otac</label>
+								<span class="osobniPodaciPregled">Viša škola, VI. stupanj fakulteta, preddiplomski studij (inženjer, pristupnik, prvostupnik)</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Zanimanje - otac</label>
+								<span class="osobniPodaciPregled">umirovljenici i ostale osobe s osobnim prihodima (ne s plaćom)</span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="form-group1">
+								<label>Položaj u zanimanju - otac</label>
+								<span class="osobniPodaciPregled">Nije aktivna osoba (umirovljenik, primatelj invalidnine, stipendije i sl.)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+				
+				
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footerProfil hidden-lg-up">
+		<p>
+			<span>Marina Gavranović - 0067580200</span>
+			<span> / Ekonomski fakultet</span>
+		</p>
+	</div>
+   <p>Fiksni tečaj konverzije 1 € = 7,53450 Kn</p>
+	
+	                   <div>
+							<a href="https://www.srce.unizg.hr/" target="_blank">
+								<img class="srcko" alt="Logo Sveučilišni računski centar - Srce" src="./Studomat - Pregled osobnih podataka_files/Logo-Srce.png" style="
+							    margin-bottom: 10px;
+							    width: 90px;">
+							</a>
+							                     
+		                    <a class="Isvu" href="https://www.isvu.hr/javno/hr/index.shtml" target="_blank">
+								<img class="isvu" src="./Studomat - Pregled osobnih podataka_files/isvu_logo-67ed05cc64dfb3768bcdade524304fce.png" alt="Logo Informacijski Sustav Visokih Učilišta" style="
+								    margin-bottom: 10px;
+								    width: 85px;">
+							</a>
+	                        
+		   
+		                    
+	                   </div>
+	
+	<p><a class="izjava" href="https://www.isvu.hr/studomat/hr/izjava-o-pristupacnosti">Izjava o pristupačnosti</a></p>
+	
+	<p></p>
+	
+	<p>2024.12.2</p>
+	
+</footer>
+		
+			
+						<script src="./Studomat - Pregled osobnih podataka_files/accessibility.min-a8a574c33946e77df98f0ec5e1df6009.js.download"></script>
+							<script> 
+							var options = {
+								    icon: {
+								    	circular: true,
+								    	img: 'accessibility',
+								        position: {
+					
+								        	bottom: { 
+								        		size: 50, 
+								        		units: 'px'	
+								        	},
+					
+								            right: {
+								                size: 0,
+								                units: 'px'
+								            },
+								            type: 'fixed'
+								        }
+								    }
+								}
+					
+								new Accessibility(options);
+						</script><style class="_access-main-css">
+        ._access-icon {
+            position: fixed;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+            opacity: 0;
+            transition-duration: .5s;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .circular._access-icon {
+            border-radius: 50%;
+        }
+        ._access-menu {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            position: fixed;
+            width: 25vw;
+            height: auto;
+            transition-duration: .5s;
+            z-index: 99991;
+            opacity: 1;
+            background-color: #fff;
+            color: #000;
+            border-radius: 3px;
+            border: solid 1px #f1f0f1;
+            font-family: RobotoDraft, Roboto, sans-serif, Arial;
+            min-width: 300px;
+            box-shadow: 0px 0px 1px #aaa;
+            max-height: 100vh;
+            
+        }
+        ._access-menu._access-close {
+            z-index: -1;
+            opacity: 0;
+            background-color: transparent;
+        }
+        ._access-menu.bottom {
+            bottom: 0;
+        }
+        ._access-menu.top {
+            top: 0;
+        }
+        ._access-menu.left {
+            left: 0;
+        }
+        ._access-menu._access-close.left {
+            left: -25vw;
+        }
+        ._access-menu.right {
+            right: 0;
+        }
+        ._access-menu._access-close.right {
+            right: -25vw;
+        }
+        ._access-menu ._text-center {
+            text-align: center;
+        }
+        ._access-menu h3 {
+            font-size: 24px !important;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0;
+            color: rgba(0,0,0,.87);
+        }
+        ._access-menu ._menu-close-btn {
+            left: 5px;
+            color: #d63c3c;
+        }
+        ._access-menu ._menu-reset-btn {
+            right: 5px;
+            color: #4054b2;
+        }
+        ._access-menu ._menu-btn {
+            position: absolute;
+            top: 5px;
+            cursor: pointer;
+            font-size: 24px !important;
+            font-weight: bold;
+        }
+        ._access-menu ul {
+            padding: 0;
+            position: relative;
+            font-size: 18px !important;
+            margin: 0;
+        }
+        ._access-menu ul li {
+            list-style-type: none;
+            cursor: pointer;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            border: solid 1px #f1f0f1;
+            padding: 10px 0 10px 30px;
+            margin: 5px;
+            border-radius: 4px;
+            transition-property: opacity;
+            transition-duration: .5s;
+            transition-timing-function: ease-in-out;
+            font-size: 18px !important;
+            line-height: 18px !important;
+            text-indent: 5px;
+            background: #f9f9f9;
+            color: rgba(0,0,0,.6);
+        }
+        ._access-menu ul li[data-access-action="resetText"] {
+            display: none;
+        }
+        ._access-menu ul.before-collapse li {
+            opacity: 0.05;
+        }
+        ._access-menu ul li.active, ._access-menu ul li.active:hover {
+            color: #fff;
+            background-color: #000;
+        }
+        ._access-menu ul li:hover {
+            color: rgba(0,0,0,.8);
+            background-color: #eaeaea;
+        }
+        ._access-menu ul li.not-supported {
+            display: none;
+        }
+        ._access-menu ul li:before {
+            content: ' ';
+            font-family: 'Material Icons';
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "liga" 1;
+            font-style: normal;
+            text-transform: none;
+            line-height: 1;
+            font-size: 24px !important;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            left: 8px;
+            position: absolute;
+            color: rgba(0,0,0,.6);
+            direction: ltr;
+        }
+        ._access-menu ul li .tick {
+            font-family: 'Material Icons';
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "liga" 1;
+            font-style: normal;
+            font-size: 24px !important;
+            text-transform: none;
+            display: none;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0,0,0,.6);
+            direction: ltr;
+            margin-left: 5px;
+        }
+        [data-increasetext-applied] [data-access-action="increaseText"] .tick {
+            display: inline-block;
+        }
+        [data-increasetext-applied] ._access-menu ul li[data-access-action="resetText"] {
+            display: block;
+        }
+        [data-highcontrast-applied] [data-access-action="highContrast"] .tick {
+            display: inline-block;
+        }
+        [data-highcontrastwhite-applied] [data-access-action="highContrastWhite"] .tick {
+            display: inline-block;
+        }
+        [data-dyslexic-applied] [data-access-action="dyslexicFont"] .tick {
+            display: inline-block;
+        }
+        [data-underline-applied] [data-access-action="underlineLinks"] .tick {
+            display: inline-block;
+        }
+        html[data-highcontrast-applied][data-highcontrastwhite-applied] ._access-menu ul li:before,
+        html[data-highcontrast-applied][data-highcontrastwhite-applied] ._access-menu ul li .tick {
+            color: rgba(255,255,255,.6);
+        }
+        ._access-menu ul li[data-access-action="increaseText"]:before {
+            content: 'zoom_in';
+        }
+        ._access-menu ul li[data-access-action="resetText"]:before {
+            content: 'settings_backup_restore';
+        }
+        ._access-menu ul li[data-access-action="highContrast"]:before {
+            content: 'hdr_strong';
+        }
+        ._access-menu ul li[data-access-action="highContrastWhite"]:before {
+            content: 'hdr_weak';
+        }
+        ._access-menu ul li[data-access-action="dyslexicFont"]:before {
+            content: 'font_download';
+        }
+        ._access-menu ul li[data-access-action="underlineLinks"]:before {
+            content: 'format_underlined';
+        }
+        ._access-menu p {
+            margin: 10px;
+            padding: 0;
+            color: rgba(0,0,0,.87);
+        }
+        ._access-menu p button {
+            display: block;
+            margin-top: 10px;
+        }
+        ._access-menu p {
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            transition-property: opacity;
+            transition-duration: .5s;
+            transition-timing-function: ease-in-out;
+        }
+        ._access-menu p.before-collapse {
+            opacity: 0;
+        }
+        </style><i class="_access-icon material-icons _access circular" style="width: 50px; height: 50px; font-size: 50px; background-color: rgb(64, 84, 178); color: rgb(255, 255, 255); bottom: 50px; right: 0px; z-index: 9999; opacity: 1;">accessibility</i><div class="_access-menu _access-close _access bottom right type"><h3 class="_text-center"><i class="_menu-close-btn _menu-btn material-icons">close</i>Pristupačnost<i class="_menu-reset-btn _menu-btn material-icons">refresh</i></h3><ul class="before-collapse"><li data-access-action="increaseText">Povećaj veličinu fonta<span class="tick">done_outline</span></li><li data-access-action="resetText">Poništi veličinu fonta<span class="tick">done_outline</span></li><li data-access-action="highContrast">Kontrast (crna pozadina)<span class="tick">done_outline</span></li><li data-access-action="highContrastWhite">Kontrast (bijela pozadina)<span class="tick">done_outline</span></li><li data-access-action="dyslexicFont">Disleksija<span class="tick">done_outline</span></li><li data-access-action="underlineLinks">Podcrtaj linkove<span class="tick">done_outline</span></li></ul><p class="before-collapse">Ako želite spremiti trajne postavke, kliknite Spremi, ako ne - vaše će se postavke poništiti kad zatvorite preglednik.<button data-access-action="saveSettings" disabled="disabled">Spremi</button></p></div>	
+			
+		<script src="./Studomat - Pregled osobnih podataka_files/bowser-2ef227168712a61379d89c7246de9f05.js.download"></script>
+        <script>
+			if (window.location.href.indexOf("/en/") > -1) {
+		 		var alertText = 'You are using an outdated version of the browser. Supported internet browsers that are able to display all parts of the interface with full functionality are the current versions of Google Chrome, Microsoft Edge and Mozilla Firefox.';
+		 	}
+		 	else {
+		 		var alertText = 'Koristite zastarjelu verziju preglednika. Podržani internet preglednici koji su u mogucnosti prikazati sve dijelove sucelja uz cjelovitu funkcionalnost su aktualne verzije Google Chrome-a, Microsoft Edge-a te Mozilla Firefox-a.';
+			}
+			 
+            if (bowser.msie && bowser.version <= 10) {
+                browserDetect.innerHTML +=
+                	'<div class="alert alert-danger">'+ alertText +'</div>';
+            }
+
+            if (bowser.opera && bowser.version <= 45) {
+                browserDetect.innerHTML +=
+                	'<div class="alert alert-danger">'+ alertText +'</div>';
+            }
+
+            if (bowser.chrome && bowser.version <= 60) {
+                browserDetect.innerHTML +=
+                	'<div class="alert alert-danger">'+ alertText +'</div>';
+            }
+
+            if (bowser.firefox && bowser.version <= 52) {
+                browserDetect.innerHTML +=
+                	'<div class="alert alert-danger">'+ alertText +'</div>';
+            }
+            if (bowser.safari && bowser.version <= 9) {
+                browserDetect.innerHTML +=
+                	'<div class="alert alert-danger">'+ alertText +'</div>';
+            }
+        </script>
+        <script>
+        
+        $(document).ready(function() {
+        	
+            if(typeof $("html").attr("data-highcontrast-applied"))
+            {
+                $(".crvena").attr("style", "");
+                $(".narancasta").attr("style", "");
+            }   
+        });
+
+        
+        </script>
+	
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"><div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div></div></body></html>
